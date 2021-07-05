@@ -118,3 +118,8 @@
   background-color: #1967d3;
   color: white;
 } */
+
+a.dropdown-item {
+  display: flex;
+  align-items: center;
+}
