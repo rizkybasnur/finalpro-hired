@@ -1,0 +1,28 @@
+* {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.banner-find-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  background: url("https://i.ibb.co/FY0vx66/Group-4265-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 182px;
+  color: #ffffff;
+}
+/* 
+.banner-find-company h5 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.banner-find-company h6 {
+  font-size: 16px;
+  line-height: 24px;
+} */

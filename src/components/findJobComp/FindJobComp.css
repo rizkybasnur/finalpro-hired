@@ -1,0 +1,9 @@
+.content-detail-job {
+  width: 100%;
+  padding-top: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* justify-content: space-around; */
+}

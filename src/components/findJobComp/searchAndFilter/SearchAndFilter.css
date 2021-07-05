@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+}
+
+/* ----- CSS UNTUK CARD PARENT CONTAINER ----- */
+.card-on-search-and-filter.card {
+  border: transparent;
+  margin-left: 234px;
+}
+
+.card-body {
+  width: 300px;
+  min-height: 102px;
+  background: #f6f7fc;
+  border-radius: 5px;
+}
+
+/* ----- CSS UNTUK CONTAINER TITLE DAN RESET DAN SELURUH ISINYA ----- */
+
+.group-for-title-an-reset {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.title-for-search-and-filter {
+  font-style: normal;
+  color: #c2c3c6;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.reset-for-search-and-filter {
+  color: #80848d;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+/* ----- CSS UNTUK SEMUA CARD TEXT ----- */
+
+.card-text {
+  font-size: 14px;
+  line-height: 21px;
+  color: #3e3e3e;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* ----- CSS UNTUK GROUP INPUT PERTAMA DAN KEDUA DAN ISI2NYA----- */
+
+.group-for-card-text-and-input {
+  margin-bottom: 32px;
+}
+
+.group-for-card-text-and-input input {
+  /* display: flex;
+  align-items: stretch; */
+  height: 44px;
+  width: 268px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  color: #80848d;
+  text-indent: 20px;
+}
+
+/* .group-for-card-text-and-input ::placeholder {
+  text-indent: 20px;
+} */
+
+.icon-bag {
+  position: absolute;
+  top: 109px;
+  left: 28px;
+}
+
+.icon-location {
+  position: absolute;
+  top: 219px;
+  left: 31px;
+}
+
+/* .group-for-card-text-and-input ::after {
+  border: 1px solid #e1e1e1;
+} */
+/*  ----- CSS UNTUK DROPDOWN DAN ISINYA */
+
+.dropdown-on-search-and-filter {
+  padding-bottom: 32px;
+}
+
+.dropdown-on-search-and-filter.dropdown-toggle.btn.btn-primary {
+  height: 44px;
+  width: 268px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #80848d;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+}
+
+.dropdown-on-search-and-filter.dropdown-toggle.btn.btn-primary img {
+  padding: 12px 9px 17px 0px;
+}
+
+.dropdown-on-search-and-filter.dropdown-toggle.btn.btn-primary::after {
+  display: none;
+}
+
+.dropdown-menu.show {
+  width: 280px;
+  padding-top: 17px;
+  padding-bottom: 21px;
+}
+
+.dropdown-form-check.form-check {
+  margin-bottom: 11.5px;
+}
+
+.container-for-selected-items {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-for-selected-h6 {
+  font-size: 12px;
+  line-height: 18px;
+  width: 50%;
+  width: 123px;
+  height: 32px;
+  background: #e2efff;
+  border-radius: 18px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #1967d3;
+}
+
+/*  CSS UNTUK CONTAINER CHECKBOX 1,2 DAN 3 BERSERTA ISINYA */
+
+.container-for-checbox {
+  margin-bottom: 35.5px;
+}
+
+.form-check input {
+  width: 15px;
+  height: 15px;
+}
+
+.form-check-label {
+  color: #3e3e3e;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* ----- CSS UNTUK STRAIGHT LINE DIVIDER DI CHECLIST KE 3 ----- */
+.straight-line-for-search-and-filter {
+  border: 1px solid #c2c3c6;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 16px 0px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+  line-height: 0.1em;
+}
+
+/* ----- CSS UNTUK SEARCH BUTTON ----- */
+.button-on-search-and-filter {
+  width: 268px;
+  height: 55px;
+}

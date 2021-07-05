@@ -1,0 +1,10 @@
+.card-my-profile {
+  display: flex;
+
+  justify-content: center;
+  width: 100%;
+}
+.my-profile-container {
+  display: flex;
+  width: 1440px;
+}

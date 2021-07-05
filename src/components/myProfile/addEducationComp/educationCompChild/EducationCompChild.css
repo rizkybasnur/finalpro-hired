@@ -1,0 +1,119 @@
+.container-childEdu {
+  width: 1090px;
+  height: 671px;
+
+  background: #ffffff;
+  /* BW/ 4 */
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  padding: 32px;
+}
+.container-childEdu input {
+  border: 1px solid #dadada;
+  display: block;
+  border-radius: 2px;
+}
+
+.cedu-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cedu-1 input {
+  height: 52px;
+  width: 1022px;
+  margin-bottom: 54px;
+  padding-left: 19px;
+}
+
+.cedu-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 54px;
+}
+.cedu-2 input {
+  height: 52px;
+  width: 460px;
+}
+
+.cedu-2 select {
+  display: block;
+  height: 52px;
+  width: 460px;
+  border: 1px solid #dadada;
+  padding-left: 19px;
+  border-radius: 2px;
+}
+
+.cedu-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cedu-3 textarea {
+  height: 155px;
+  width: 1022px;
+  border: 1px solid #dadada;
+  padding: 19px;
+  resize: none;
+  border-radius: 2px;
+}
+
+.container-childEdu h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  margin-bottom: 8px;
+
+  /* BW/ 1 */
+
+  color: #3e3e3e;
+}
+
+.container-childEdu p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  margin-bottom: 50px;
+
+  /* BW/ 1 */
+
+  color: #3e3e3e;
+}
+
+.container-childEdu label {
+  z-index: 2;
+  float: left;
+  height: 10px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  left: 17px;
+  top: -115px;
+  background-color: #fff;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3e3e3e;
+}
+
+.cedu-2 label {
+  left: 17px;
+  top: -60px;
+}
+
+.cedu-3 label {
+  left: 17px;
+  top: -169px;
+}

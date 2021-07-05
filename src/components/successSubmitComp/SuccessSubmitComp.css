@@ -1,0 +1,47 @@
+.parent-container-for-success-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-for-success-submit {
+  width: 459px;
+  height: 291px;
+  text-align: center;
+  align-items: center;
+  margin: 120px 490px 82px 491px;
+}
+
+.container-for-success-submit img {
+  width: 86px;
+  height: 86px;
+  margin-bottom: 24px;
+}
+
+.container-for-success-submit h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3e3e3e;
+  margin-bottom: 22px;
+}
+
+.container-for-success-submit h5 {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #80848d;
+  margin-bottom: 24px;
+}
+
+.container-for-success-submit button {
+  background: #ffeee1;
+  border-radius: 6px;
+  width: 262px;
+  height: 55px;
+  border: transparent;
+  color: #ff9e57;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}

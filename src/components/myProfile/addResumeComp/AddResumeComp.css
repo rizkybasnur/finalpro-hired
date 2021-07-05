@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container-resume {
+  background: #e5e5e5;
+  width: 1170px;
+  padding: 0 40px 24px 40px;
+}
+.Resume {
+  width: 1090px;
+  height: 331px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 32px;
+}
+.uploadResume-myprofile {
+  margin: 0 0 8px 0;
+  width: 208px;
+  height: 52px;
+  padding-top: 14px;
+
+  text-align: center;
+  background-color: #ff9e57;
+  border-radius: 6px;
+}
+.uploadResume-myprofile a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.listButtom-resume h5 {
+  width: 400px;
+  height: 48px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  /* font-weight: normal; */
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  /* BW/ 2 */
+
+  color: #80848d;
+}
+
+.listButtom-resume h5 span {
+  font-weight: 700;
+}
+.Resume h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
+.Resume p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
+.Resume button {
+  margin: 0 0 0 764px;
+  width: 262px;
+  height: 55px;
+  background: #e2efff;
+  border-radius: 6px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  border-style: hidden;
+  color: #1967d3;
+}

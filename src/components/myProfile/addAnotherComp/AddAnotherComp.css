@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container-another {
+  background: #e5e5e5;
+  width: 1170px;
+  padding: 0 40px 49px 40px;
+}
+
+.container-mpButtom {
+  width: 1090px;
+  height: 103px;
+  flex-direction: column;
+  padding: 24px;
+  background: #ffffff;
+  justify-content: right;
+  /* BW/ 4 */
+
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.bag-white {
+  width: 1042px;
+  height: 55px;
+  background: #ffeee1;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 139px;
+
+  /* h */
+}
+
+.bag-white h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  /* line-height: 21px; */
+  text-align: center;
+  color: #ff9e57;
+  margin-bottom: 0;
+}

@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-displaceMp {
+  width: 270px;
+  /* height: 1792px; */
+  background: #ffffff;
+  padding-top: 46px;
+  box-shadow: 0px 5px 23px -5px rgba(149, 149, 149, 0.15);
+  /* flex-direction: column; */
+  /* justify-content: start; */
+}
+.displaceMp button {
+  border: none;
+  height: 56px;
+  width: 270px;
+  background: #ffffff;
+  padding-left: 34.67px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #3e3e3e;
+}
+.displaceMp button:hover {
+  color: #3d8eff;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgb(235, 246, 255);
+}
+.displaceMp button:focus {
+  color: #3d8eff;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: rgb(235, 246, 255);
+  border-left: 5px solid;
+  border-left-color: blue;
+}
+.displaceMp img {
+  margin-right: 26.67px;
+}

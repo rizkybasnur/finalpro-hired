@@ -1,0 +1,9 @@
+.content-company-search-and-container {
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 234px;
+  padding-right: 235px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

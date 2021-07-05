@@ -1,0 +1,69 @@
+.container-childSalary {
+  width: 1090px;
+  height: 242px;
+  background: #ffffff;
+
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  padding: 32px;
+}
+.container-childSalary label {
+  z-index: 2;
+  float: left;
+  height: 10px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  left: 10px;
+  top: -60px;
+  background-color: #fff;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3e3e3e;
+}
+
+.container-childSalary h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin-bottom: 8px;
+}
+
+.container-childSalary p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin-bottom: 50px;
+}
+.cs-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-main input {
+  display: block;
+  border-radius: 2px;
+  height: 52px;
+  width: 224px;
+  border: 1px solid #d0d0d0;
+  color: #6200ee;
+  padding-left: 19px;
+}
+
+.cs-main select {
+  display: block;
+  border-radius: 2px;
+  height: 52px;
+  width: 224px;
+  border: 1px solid #d0d0d0;
+  color: #3e3e3e;
+  padding-left: 19px;
+}

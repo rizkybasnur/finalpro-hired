@@ -1,0 +1,166 @@
+.container-childWork {
+  height: 777px;
+  width: 1090px;
+  background: #ffffff;
+  padding: 32px;
+
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+}
+
+.cwork-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cwork-1 input {
+  height: 52px;
+  width: 1022px;
+  margin-bottom: 54px;
+  padding-left: 19px;
+}
+.cwork-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.cwork-2 input {
+  height: 52px;
+  width: 493px;
+  margin-bottom: 54px;
+  padding-left: 19px;
+}
+.cwork-2 select {
+  height: 52px;
+  width: 493px;
+  margin-bottom: 54px;
+  border: 1px solid #dadada;
+  padding-left: 19px;
+  display: block;
+  border-radius: 2px;
+}
+.cwork-3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 54px;
+}
+.cwork-3 input {
+  height: 52px;
+  width: 224px;
+  margin-inline: 21px;
+  padding-left: 19px;
+}
+.cwork-3 select {
+  display: block;
+  height: 52px;
+  width: 224px;
+  margin-right: 21px;
+  border: 1px solid #dadada;
+  padding-left: 19px;
+  border-radius: 2px;
+}
+.cwork-3right select {
+  height: 52px;
+  width: 224px;
+  margin-right: 21px;
+  border: 1px solid #dadada;
+  padding-left: 19px;
+  margin-left: 21px;
+  border-radius: 2px;
+  display: block;
+}
+.cwork-4 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.cwork-4 textarea {
+  display: block;
+  height: 155px;
+  width: 1022px;
+  padding: 14px 19px;
+  margin-bottom: 54px;
+  border: 1px solid #dadada;
+  resize: none;
+
+  border-radius: 2px;
+}
+.container-childWork input {
+  border: 1px solid #dadada;
+
+  border-radius: 2px;
+  display: block;
+}
+
+.container-childWork h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+  /* identical to box height, or 150% */
+
+  /* BW/ 1 */
+
+  color: #3e3e3e;
+}
+.container-childWork p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 50px;
+  /* identical to box height, or 150% */
+
+  /* BW/ 1 */
+
+  color: #3e3e3e;
+}
+
+.cwork-3 h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  /* BW/ 1 */
+
+  color: #3e3e3e;
+}
+
+.container-childWork label {
+  z-index: 2;
+  float: left;
+  height: 10px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  left: 17px;
+  top: -115px;
+  background-color: #fff;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3e3e3e;
+}
+
+.cwork-3right label {
+  left: 39px;
+  top: -60px;
+}
+
+.cwork-3left label {
+  left: 17px;
+  top: -60px;
+}
+
+.cwork-4 label {
+  left: 17px;
+  top: -217px;
+}

@@ -1,0 +1,67 @@
+.container-for-joblist-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 33px;
+  min-width: 137px;
+}
+
+.job-list-card {
+  height: 137px;
+  width: 640px;
+  padding: 24px 24px;
+  cursor: pointer;
+}
+
+.joblist-logo {
+  width: 53px;
+  height: 53px;
+}
+
+.content-for-job-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 590px;
+  height: 89px;
+  justify-content: center;
+}
+
+.container-for-h {
+  margin-left: 19px;
+  margin-right: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container-for-h h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container-for-h h6 {
+  margin: 0;
+  margin-left: 5.33px;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-right: 11px;
+}
+
+.container-for-h p {
+  width: 69px;
+  height: 20px;
+  border-radius: 11px;
+  background-color: #e2efff;
+  color: #3d8eff;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 16px;
+  padding-top: 1.5px;
+}
+
+.job-detail-joblist {
+  display: flex;
+}

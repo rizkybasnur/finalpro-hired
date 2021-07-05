@@ -1,0 +1,153 @@
+.container-childUserMp {
+  width: 1090px;
+  height: 844px;
+  background: #ffffff;
+  /* BW/ 4 */
+
+  /* border: 1px solid #e1e1e1; */
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  padding: 32px;
+}
+
+.cump-top {
+  display: flex;
+  width: 778px;
+  height: 114px;
+  margin-bottom: 57px;
+}
+.cump-topB {
+  margin: 6px 0 0 42px;
+}
+
+.cump-topB button {
+  width: 163px;
+  height: 55px;
+  background: #e2efff;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 24px;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #1967d3;
+}
+
+.cump-topB p {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
+
+.cump-topB span {
+  font-weight: 700;
+}
+.cump-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  width: 1026px;
+  height: 318px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+/* .cump-main input {
+  height: 52px;
+  width: 493px;
+  border-radius: 2px;
+  border: 1px solid #d0d0d0;
+  color: #6200ee;
+  margin-bottom: 54px;
+  padding-left: 21px;
+} */
+
+.cump-boot {
+  margin: 32px 0;
+  width: 1026px;
+  height: 245px;
+}
+.cump-bootB {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  margin-top: 35px;
+}
+
+.cump-boot input {
+  display: block;
+  height: 52px;
+  width: 493px;
+  border-radius: 2px;
+  border: 1px solid #d0d0d0;
+  color: #6200ee;
+  margin-bottom: 54px;
+  padding-left: 21px;
+}
+
+.cump-boot h2 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* BW/ 1 */
+
+  color: #3e3e3e;
+}
+
+.cump-main select {
+  display: block;
+  height: 52px;
+  width: 493px;
+  border-radius: 2px;
+  border: 1px solid #d0d0d0;
+  color: #3e3e3e;
+  padding-left: 21px;
+  margin-bottom: 54px;
+}
+
+.cump-main input {
+  border: 1px solid transparent;
+  line-height: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.container-childUserMp label {
+  z-index: 2;
+  float: left;
+  height: 10px;
+  padding: 0px 5px 0px 5px;
+  position: relative;
+  left: 10px;
+  top: -115px;
+  background-color: #fff;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3e3e3e;
+}
+
+.cump-main input {
+  display: block;
+  height: 52px;
+  width: 493px;
+  border-radius: 2px;
+  border: 1px solid #d0d0d0;
+  color: #6200ee;
+  margin-bottom: 54px;
+  padding-left: 21px;
+}

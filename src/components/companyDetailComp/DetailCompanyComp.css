@@ -1,0 +1,9 @@
+.container-for-job-detail-and-card {
+  width: 100%;
+  padding-top: 24px;
+  padding-left: 233.84px;
+  padding-right: 234.16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

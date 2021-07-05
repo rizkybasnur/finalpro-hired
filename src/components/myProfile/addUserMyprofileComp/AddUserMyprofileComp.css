@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Proxima Nova;
+}
+.container-myprofile {
+  background: #e5e5e5;
+  width: 1170px;
+  padding: 46px 40px 24px 40px;
+}
+.container-myprofile h1 {
+  width: 94px;
+  height: 28px;
+  margin-bottom: 19px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 28px;
+  /* border: 1px solid; */
+}
+
+.profile-top {
+  width: 1090px;
+  height: 284px;
+  /* BW/ 6 */
+  background: #ffffff;
+  /* BW/ 4 */
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.profile-left {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.profile-img {
+  margin: 32px 0 0 32px;
+}
+.list-profile {
+  padding: 39px 0 0 37px;
+}
+
+.list-profile h2 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+.child-listprofile {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
+
+.child-listprofile img {
+  margin-right: 12.58px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.child2-listprofile img {
+  margin-right: 17.58px;
+}
+
+.btn-profile {
+  padding: 197px 32px 32px 0;
+}
+.btn-profile button {
+  width: 262px;
+  height: 55px;
+  left: 1106px;
+  top: 375px;
+  background: #e2efff;
+  border-style: hidden;
+  border-radius: 6px;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1967d3;
+}
+
+.open-umcc {
+  width: 1090px;
+  padding: 0 0 32px 694px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+}
+
+.open-umcc button {
+  width: 150px;
+  height: 55px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin-inline-start: 32px;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  border: rgb(110, 110, 110);
+  box-shadow: 0px 5px 23px -5px rgba(84, 84, 84, 0.15);
+  text-align: center;
+  border: hidden;
+
+  /* Blue / 1 */
+
+  color: #1967d3;
+}
+
+.open-umcc button:hover {
+  background: #1967d3;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height, or 150% */
+
+  box-shadow: 0px 23px 23px -23px rgba(149, 149, 149, 0.15);
+  text-align: center;
+
+  /* BW / White */
+
+  color: #ffffff;
+}
+.open-umcc button:focus {
+  background: #1967d3;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height, or 150% */
+  box-shadow: 0px 5px 23px -5px rgba(149, 149, 149, 0.15);
+  text-align: center;
+
+  /* BW / White */
+
+  color: #ffffff;
+}

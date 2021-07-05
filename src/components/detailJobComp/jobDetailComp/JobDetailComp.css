@@ -1,0 +1,50 @@
+.container-for-job-detail-description {
+  width: 640px;
+}
+
+.router {
+  color: #80848d;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 46px;
+}
+
+.router h6 span {
+  color: #3e3e3e;
+}
+
+.jobdesc-jobs {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin-bottom: 40px;
+}
+
+.jobdesc-jobs h5 {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.straight-jobdesc-jobs {
+  border: 1px solid #e1e1e1;
+  margin-bottom: 40px;
+}
+
+.container-related-jobs {
+  margin-bottom: 40px;
+}
+
+.container-related-jobs h3 {
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+
+.container-related-jobs h4 {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+}

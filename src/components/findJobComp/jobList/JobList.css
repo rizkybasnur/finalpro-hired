@@ -1,0 +1,75 @@
+.joblist-list-title-box {
+  padding-left: 32px;
+  padding-top: 5px;
+
+  margin-right: 234px;
+}
+
+.dropdown-menu.show {
+  width: 123px;
+}
+
+.joblist-list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 33px;
+  width: 640px;
+}
+
+.filter-by-time-dropdown {
+  width: 113px;
+  height: 39px;
+  background: #f3f3f3;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3e3e3e;
+  border: transparent;
+  align-items: center;
+  padding: 10px 5px 10px 20px;
+}
+
+.filter-by-time-dropdown option {
+  width: 129px;
+  height: 111px;
+  background: #ffffff;
+  border: transparent;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 5px;
+}
+
+.container-for-job-list {
+  width: 640px;
+  height: 137px;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 0;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.show-more-button-joblist {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 5%;
+  width: 640px;
+}
+
+.show-more-button-joblist button {
+  border: transparent;
+  color: #1967d3;
+  background: #e2efff;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  width: 124px;
+  height: 55px;
+}

@@ -1,0 +1,47 @@
+.parent-container-for-bookmard-expired {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-for-bookmard-expired {
+  width: 262px;
+  height: 353px;
+  text-align: center;
+  align-items: center;
+  margin: 77px 589px 52px 589px;
+}
+
+.container-for-bookmard-expired img {
+  width: 256px;
+  height: 206px;
+  margin-bottom: 18px;
+}
+
+.container-for-bookmard-expired h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #3e3e3e;
+  margin-bottom: 8px;
+}
+
+.container-for-bookmard-expired h5 {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #80848d;
+  margin-bottom: 18px;
+}
+
+.container-for-bookmard-expired button {
+  background: #e2efff;
+  border-radius: 6px;
+  width: 262px;
+  height: 55px;
+  border: transparent;
+  color: #1967d3;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}

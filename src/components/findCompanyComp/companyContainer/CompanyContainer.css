@@ -1,0 +1,24 @@
+.container-for-company-list {
+  padding-top: 4px;
+  padding-left: 32px;
+}
+
+.show-more-button-company-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 5%;
+  width: 640px;
+}
+
+.show-more-button-company-list button {
+  border: transparent;
+  color: #1967d3;
+  background: #e2efff;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  width: 124px;
+  height: 55px;
+  margin-top: 18px;
+}

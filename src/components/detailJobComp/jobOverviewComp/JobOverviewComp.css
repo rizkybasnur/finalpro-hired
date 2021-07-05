@@ -1,0 +1,133 @@
+* {
+  margin-bottom: 0px;
+}
+
+.body-card-for-overview-job {
+  margin-top: 44px;
+  margin-left: 32.16px;
+}
+.card-for-job-overview.card {
+  border: transparent;
+}
+
+.container-for-job-overview {
+  margin-left: 26.59px;
+}
+
+.title-overview h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.job-overview-data {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data img {
+  width: 16.5px;
+  height: 18.33px;
+  margin-right: 18.75px;
+}
+
+.job-overview-string h5 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #80848d;
+}
+
+.job-overview-string h6 {
+  font-size: 15px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
+
+.containers-button-apply-and-save {
+  display: flex;
+  flex-direction: column;
+}
+
+.containers-button-apply-and-save button {
+  border: transparent;
+  border-radius: 6px;
+}
+
+.button-apply {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #1967d3;
+  color: #ffffff;
+  margin-bottom: 16px;
+  width: 268px;
+  height: 55px;
+}
+
+.button-apply:active {
+  background-color: #1967d3;
+  transform: translateY(4px);
+}
+
+/* .button-save-job {
+  color: #1967d3;
+  background: #e2efff;
+  width: 268px;
+  height: 55px;
+} */
+
+.button-save-job {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #1967d3;
+  background-color: #e2efff;
+  border: none;
+  border-radius: 15px;
+}
+
+.button-save-job:active {
+  background-color: #e2efff;
+  transform: translateY(4px);
+}
+
+.body-card-for-view-company-profile {
+  margin-top: 16px;
+  margin-left: 32.16px;
+  height: 102px;
+}
+.body-card-for-view-company-profile.card-body {
+  padding: 24px 62px 26px 24px;
+}
+
+.view-company-profile {
+  display: flex;
+  flex-direction: row;
+  padding: ;
+}
+
+.view-company-profile img {
+  height: 53px;
+  width: 53px;
+  margin-right: 16px;
+}
+
+.view-company-string h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+}
+
+.view-company-string a {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  color: #1967d3;
+  text-decoration: none;
+}
