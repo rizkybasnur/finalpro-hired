@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./UserMpCompChild.css";
 
 function UserMpCompChild() {
+  const { fullname, profile_pic, email } = useSelector(
+    (state) => state.loginred
+  );
   return (
     <div className="container-childUserMp">
       <div className="cump-top">

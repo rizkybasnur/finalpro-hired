@@ -28,6 +28,8 @@
   border: transparent;
   align-items: center;
   padding: 10px 5px 10px 20px;
+  cursor: pointer;
+  outline: none;
 }
 
 .filter-by-time-dropdown option {

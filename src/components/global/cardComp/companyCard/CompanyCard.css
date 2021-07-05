@@ -59,3 +59,15 @@
   width: 156px;
   padding-top: 5.26px;
 }
+
+.location-company-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.location-company-card img {
+  width: 7px;
+  height: 10px;
+  margin-right: 6.5px;
+}

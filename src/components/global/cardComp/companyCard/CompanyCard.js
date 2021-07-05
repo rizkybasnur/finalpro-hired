@@ -16,7 +16,10 @@ function CompanyCard() {
           <div className="content-company-card">
             <img src="https://i.ibb.co/Nszfsys/spotify-icon.png" alt="" />
             <h5>spotify</h5>
-            <h6> berlin</h6>
+            <div className="location-company-card">
+              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
+              <h6> berlin</h6>
+            </div>
             <h4>4 open position</h4>
           </div>
         </div>
@@ -27,7 +30,10 @@ function CompanyCard() {
           <div className="content-company-card">
             <img src="https://i.ibb.co/Nszfsys/spotify-icon.png" alt="" />
             <h5>spotify</h5>
-            <h6> berlin</h6>
+            <div className="location-company-card">
+              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
+              <h6> berlin</h6>
+            </div>
             <h4>4 open position</h4>
           </div>
         </div>
@@ -38,7 +44,10 @@ function CompanyCard() {
           <div className="content-company-card">
             <img src="https://i.ibb.co/Nszfsys/spotify-icon.png" alt="" />
             <h5>spotify</h5>
-            <h6> berlin</h6>
+            <div className="location-company-card">
+              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
+              <h6> berlin</h6>
+            </div>
             <h4>4 open position</h4>
           </div>
         </div>

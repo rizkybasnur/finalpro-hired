@@ -1,6 +1,6 @@
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginSrvc } from "../../../../services/loginSrvc";
 import "../ModalComp.css";
 // import { useSelector } from "react-redux";
@@ -12,8 +12,8 @@ function ModalLogin(props) {
   const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
   const [eyes, setEyes] = useState(false);
-  // const [status, setStatus] = useState(false);
-  // const [validate, setValidate] = useState(false);
+  const [status, setStatus] = useState(false);
+  const [validate, setValidate] = useState(false);
   // const [picture, setPicture] = useState("");
 
   const togglePasswordVisiblity = () => {
@@ -31,6 +31,7 @@ function ModalLogin(props) {
         store.setItem("profile_pic", response.data.data.profile_pic);
         store.setItem("token", response.data.token);
         store.setItem("email", response.data.data.email);
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error);
@@ -44,13 +45,15 @@ function ModalLogin(props) {
   // useEffect(() => {
   //   if (status === 200) {
   //     props.onHide;
-  //   } else if (status === null) {
-  //     setValidate(false);
-  //   } else {
-  //     setValidate(true);
-  //   }
-  // }, [status]);
-  // console.log(status, "status");
+  //   } else
+  useEffect(() => {
+    if (status === null) {
+      setValidate(false);
+    } else {
+      setValidate(true);
+    }
+  }, [status]);
+  console.log(status, "status");
 
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>

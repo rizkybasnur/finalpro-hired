@@ -64,4 +64,20 @@
 
 .job-detail-joblist {
   display: flex;
+  align-items: baseline;
+}
+
+.company-logo {
+  width: 13.33px;
+  height: 12.67px;
+}
+
+.location-logo {
+  width: 9.33px;
+  height: 13.33px;
+}
+
+.salary-logo {
+  width: 15px;
+  height: 10px;
 }

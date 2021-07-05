@@ -41,6 +41,11 @@
 .profile-img {
   margin: 32px 0 0 32px;
 }
+
+.profile-img img {
+  width: 114px;
+}
+
 .list-profile {
   padding: 39px 0 0 37px;
 }

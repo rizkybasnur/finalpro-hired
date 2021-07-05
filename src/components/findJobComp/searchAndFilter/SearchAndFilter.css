@@ -26,9 +26,9 @@
 .title-for-search-and-filter {
   font-style: normal;
   color: #c2c3c6;
-  font-size: 16px;
+  /* font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 24px; */
 }
 
 .reset-for-search-and-filter {

@@ -82,7 +82,9 @@ function HeaderComp() {
                   setRegisModal(false);
                 }}
               />
-              <button className="post">Post Job</button>
+              <li>
+                <button className="post">Post Job</button>
+              </li>
             </li>
           </ul>
         ) : (

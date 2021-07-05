@@ -29,11 +29,23 @@ function JoblistCard() {
           <div className="container-for-h">
             <h5>Senior Product Designer</h5>
             <div className="job-detail-joblist">
-              <img src="https://i.ibb.co/hCCZXFc/bag-icon.png" alt="" />
+              <img
+                className="company-logo"
+                src="https://i.ibb.co/hCCZXFc/bag-icon.png"
+                alt=""
+              />
               <h6>InVision</h6>
-              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
+              <img
+                className="location-logo"
+                src="https://i.ibb.co/WV3zyZV/location-icon.png"
+                alt=""
+              />
               <h6>London, UK</h6>
-              <img src="https://i.ibb.co/0K9LCBG/money-icon.png" alt="" />
+              <img
+                className="salary-logo"
+                src="https://i.ibb.co/0K9LCBG/money-icon.png"
+                alt=""
+              />
               <h6>Rp7.500.000 - Rp9.500.000</h6>
             </div>
             <p>Full Time</p>

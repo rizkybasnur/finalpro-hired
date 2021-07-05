@@ -58,6 +58,11 @@
   width: 500px;
   border-style: hidden;
 }
+
+.input-search input:focus {
+  outline: none;
+}
+
 .input-search button {
   background: #ff9d57dc;
   border-radius: 6px;

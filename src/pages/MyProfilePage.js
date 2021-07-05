@@ -1,11 +1,11 @@
 import React from "react";
-import UserDropdownComp from "../components/global/userDropdownComp/UserDropdownComp";
+import HeaderComp from "../components/global/headerComp/HeaderComp";
 import MyProfileContainer from "../components/myProfile/myProfileContainer/MyProfileContainer";
 
 function MyProfilePage() {
   return (
     <div>
-      <UserDropdownComp />
+      <HeaderComp />
       <MyProfileContainer />
     </div>
   );
