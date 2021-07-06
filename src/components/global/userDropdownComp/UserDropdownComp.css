@@ -119,7 +119,10 @@
   color: white;
 } */
 
-a.dropdown-item {
-  display: flex;
-  align-items: center;
+.dropdown-toggle.dropdown-toggle-split.btn.btn-none {
+  width: 30px;
+}
+
+.dropdown-toggle.dropdown-toggle-split.btn.btn-none :focus {
+  outline: 0 !important;
 }

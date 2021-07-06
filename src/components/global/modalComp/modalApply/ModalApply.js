@@ -1,44 +1,43 @@
 import Modal from "react-bootstrap/Modal";
-import { Button } from "react-bootstrap";
-import { useState } from "react";
-import { loginSrvc } from "../../../../services/loginSrvc";
-import "../ModalComp.css";
+import { useHistory } from "react-router-dom";
+import "./ModalApply.css";
 
-function ModalLogin(props) {
-  //   const applyHandler = (e) => {
-  //     e.preventDefault();
-  //     applySrvc(email, password)
-  //       .then((response) => {
-  //         dispatch(loginAct(username, token, logstatus));
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //         dispatch(handleLogin(null, null, null, error.message));
-  //       });
-  //   };
+function ModalApply(props) {
+  const history = useHistory();
+  const applyHandler = (e) => {
+    e.preventDefault();
+    history.push("/jobdetailpage/submitted");
+  };
 
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
-      <Modal.Body>
-        <div>
-          <h4>Submit Application</h4>
-          <img src="https://i.ibb.co/XVZB7Lb/close-icon.png" alt="" onClick={props.onHide} />
+      <Modal.Body className="modal-apply">
+        <div className="title-modal-apply">
+          <h3>Submit Application</h3>
+          <img
+            className="close-apply-icon"
+            src="https://i.ibb.co/1rWd0pV/close-icon-black.png"
+            alt=""
+            onClick={props.onHide}
+          />
         </div>
         <div>
-          <h5>
+          <h5 className="detail-modal-apply">
             Are you sure to submit your application for Product Designer at Momo
             Wallet?
           </h5>
         </div>
-        <div>
-          <Button className="cancel-apply-button" onClick={props.onHide}>
+        <div className="containers-button-apply">
+          <button className="cancel-apply-button" onClick={props.onHide}>
             Cancel
-          </Button>
-          <Button variant="primary" onClick={}>Apply</Button>
+          </button>
+          <button className="apply-apply-button" onClick={applyHandler}>
+            Apply
+          </button>
         </div>
       </Modal.Body>
     </Modal>
   );
 }
 
-export default ModalLogin;
+export default ModalApply;

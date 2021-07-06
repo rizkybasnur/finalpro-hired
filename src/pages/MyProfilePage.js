@@ -1,12 +1,12 @@
 import React from "react";
 import HeaderComp from "../components/global/headerComp/HeaderComp";
-import MyProfileContainer from "../components/myProfile/myProfileContainer/MyProfileContainer";
+import DisplacementProfileComp from "../components/myProfileComp/displacementProfileComp/DisplacementProfileComp";
 
 function MyProfilePage() {
   return (
     <div>
       <HeaderComp />
-      <MyProfileContainer />
+      <DisplacementProfileComp />
     </div>
   );
 }

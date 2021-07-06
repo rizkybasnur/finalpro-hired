@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function UserDropdownComp() {
-  const { fullname, profile_pic } = useSelector((state) => state.loginred);
+  const { fullname } = useSelector((state) => state.loginred);
   const history = useHistory();
 
   const handleUser = () => {
@@ -23,7 +23,11 @@ function UserDropdownComp() {
     <div className="list-button2">
       <ul>
         <li>
-          <img className="photo-profile" src={profile_pic} alt="Ellipse-user" />
+          <img
+            className="photo-profile"
+            src="https://i.ibb.co/tmwPPy6/myprofile-user.png"
+            alt="Ellipse-user"
+          />
         </li>
         <li>
           {/* <img src="Vector-dropdown.svg" alt="" /> */}

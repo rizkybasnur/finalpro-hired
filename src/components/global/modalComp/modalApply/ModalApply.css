@@ -1,0 +1,64 @@
+.modal-apply.modal-body {
+  width: 509px;
+  padding: 24px;
+}
+
+.title-modal-apply {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.close-apply-icon {
+  width: 18.67px;
+  height: 18.67px;
+  cursor: pointer;
+}
+
+.submit-apply-text {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #3e3e3e;
+  margin-bottom: 0px;
+}
+
+.detail-modal-apply {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #80848d;
+  margin-top: 22px;
+  margin-bottom: 0px;
+}
+
+.containers-button-apply {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 21px;
+}
+
+button.cancel-apply-button {
+  width: 150px;
+  height: 55px;
+  border: transparent;
+  margin-right: 32px;
+  color: #1967d3;
+  background: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 0px;
+}
+
+button.apply-apply-button {
+  width: 150px;
+  height: 55px;
+  border: transparent;
+  color: #ffffff;
+  background: #1967d3;
+  border-radius: 6px;
+  margin-bottom: 0px;
+}

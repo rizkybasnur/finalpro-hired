@@ -2,12 +2,12 @@
   padding: 0;
   margin: 0;
 }
-.container-skills {
-  background: #e5e5e5;
+.container-work {
+  background: #f6f7fc;
   width: 1170px;
   padding: 0 40px 24px 40px;
 }
-.Skills {
+.Work {
   width: 1090px;
   height: 191px;
   background: #ffffff;
@@ -16,25 +16,23 @@
   border-radius: 5px;
   padding: 32px;
 }
-.Skills h6 {
+.Work h6 {
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #3e3e3e;
-  margin: 0;
 }
-.Skills p {
+.Work p {
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   color: #3e3e3e;
-  margin: 0;
 }
-.Skills button {
+.Work button {
   margin: 0 0 0 764px;
   width: 262px;
   height: 55px;

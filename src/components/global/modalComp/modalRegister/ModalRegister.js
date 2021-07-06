@@ -65,6 +65,7 @@ function ModalRegister(props) {
           src="https://i.ibb.co/XVZB7Lb/close-icon.png"
           alt=""
           onClick={props.onHide}
+          className="close-button-modal-logreg"
         />
         <h2>Create Hired Account</h2>
         <div className="alt-register">

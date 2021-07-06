@@ -8,9 +8,11 @@
 
 .job-list-card {
   height: 137px;
-  width: 640px;
+  width: 100%;
   padding: 24px 24px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 
 .joblist-logo {
@@ -18,13 +20,17 @@
   height: 53px;
 }
 
+.joblist-no-bookmark {
+  display: flex;
+}
+
 .content-for-job-list {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 590px;
+  min-width: 590px;
   height: 89px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .container-for-h {

@@ -1,7 +1,17 @@
 import React from "react";
 import "./SearchComp.css";
+import { useHistory } from "react-router-dom";
 
 function SearchComp() {
+  const history = useHistory();
+  const jobHandler = (e) => {
+    e.preventDefault();
+    history.push("/findjobspage");
+  };
+  const companyHandler = (e) => {
+    e.preventDefault();
+    history.push("/companysearchpage");
+  };
   return (
     <div className="parent-search-container">
       <div className="search-container">
@@ -17,11 +27,11 @@ function SearchComp() {
             alt="Loop-search-Comp"
           />
           <input placeholder="Job title, keywords, or company" />
-          <button>Find job</button>
+          <button onClick={jobHandler}>Find job</button>
         </div>
-        <div className="bot-title-search">
+        <div className="bot-title-search" onClick={companyHandler}>
           <p>Popular searches: Designer, Web, iOS, PHP, Senior Engineer</p>
-          <h5>Advance Search</h5>
+          <h5>Find Company</h5>
         </div>
       </div>
     </div>

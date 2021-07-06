@@ -3,6 +3,17 @@
   padding: 0px;
 }
 
+.displacement-parent-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.displacement-container {
+  display: flex;
+  width: 1440px;
+}
+
 .container-displaceMp {
   width: 270px;
   /* height: 1792px; */

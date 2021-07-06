@@ -4,12 +4,16 @@ import Card from "react-bootstrap/Card";
 import { useHistory } from "react-router-dom";
 import ModalLogin from "../../global/modalComp/modalLogin/ModalLogin";
 import ModalRegister from "../../global/modalComp/modalRegister/ModalRegister";
+import ModalApply from "../../global/modalComp/modalApply/ModalApply";
+import { useSelector } from "react-redux";
 
 function JobOverviewComp() {
+  const { token } = useSelector((state) => state.loginred);
   const history = useHistory();
   const [saveJob, setSaveJob] = useState(false);
   const [loginModal, setLoginModal] = useState(false);
   const [regisModal, setRegisModal] = useState(false);
+  const [applyModal, setApplyModal] = useState(false);
 
   const saveJobHandler = (e) => {
     e.preventDefault();
@@ -110,10 +114,13 @@ function JobOverviewComp() {
           <div className="containers-button-apply-and-save">
             <button
               className="button-apply"
-              onClick={() => setLoginModal(true)}
+              onClick={
+                token ? () => setApplyModal(true) : () => setLoginModal(true)
+              }
             >
               Apply
             </button>
+            <ModalApply show={applyModal} onHide={() => setApplyModal(false)} />
             <ModalLogin
               show={loginModal}
               onHide={() => setLoginModal(false)}
@@ -130,9 +137,18 @@ function JobOverviewComp() {
                 setRegisModal(false);
               }}
             />
-            <button className="button-save-job" onClick={saveJobHandler}>
-              {saveJob ? "Saved to List" : "Save Job"}
-            </button>
+            {token ? (
+              <button className="button-save-job" onClick={saveJobHandler}>
+                {saveJob ? "Saved to List" : "Save Job"}
+              </button>
+            ) : (
+              <button
+                className="button-save-job"
+                onClick={() => setLoginModal(true)}
+              >
+                Save Job
+              </button>
+            )}
           </div>
         </Card.Body>
         <Card.Body className="body-card-for-view-company-profile">
