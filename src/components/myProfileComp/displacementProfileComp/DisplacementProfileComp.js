@@ -11,17 +11,6 @@ function DisplacementProfileComp() {
   const [notif, setNotif] = useState(false);
   const [saved, setSaved] = useState(false);
 
-  console.log(
-    "profile",
-    profile,
-    "apply",
-    apply,
-    "notif",
-    notif,
-    "saved",
-    saved
-  );
-
   const profileHandler = (e) => {
     e.preventDefault();
     setProfile(true);

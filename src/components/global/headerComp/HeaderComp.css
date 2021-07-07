@@ -54,6 +54,7 @@
 .login {
   background-color: #e2efff;
   color: blue;
+  margin-right: 24px;
 }
 
 .post {
@@ -63,4 +64,9 @@
 
 img.logo-hired-on-header {
   cursor: pointer;
+}
+
+.menu-dropdown.dropdown-menu.show {
+  text-align: left;
+  width: 190px;
 }

@@ -46,14 +46,14 @@ function ModalLogin(props) {
   //   if (status === 200) {
   //     props.onHide;
   //   } else
-  useEffect(() => {
-    if (status === null) {
-      setValidate(false);
-    } else {
-      setValidate(true);
-    }
-  }, [status]);
-  console.log(status, "status");
+  // useEffect(() => {
+  //   if (status === null) {
+  //     setValidate(false);
+  //   } else {
+  //     setValidate(true);
+  //   }
+  // }, [status]);
+  // console.log(status, "status");
 
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>

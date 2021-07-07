@@ -13,10 +13,11 @@ function JoblistCard() {
   const history = useHistory();
   const { token } = useSelector((state) => state.loginred);
 
-  const containerClick = (e) => {
-    e.preventDefault();
+  const containerClick = () => {
+    console.log("container click");
     history.push("/jobdetailpage");
   };
+
   const hanldeBookmarkClick = (e) => {
     e.stopPropagation();
     setBookmark((prevCheck) => !prevCheck);
@@ -24,8 +25,8 @@ function JoblistCard() {
   console.log(bookmark, "bookmark");
 
   return (
-    <div className="container-for-joblist-card" onClick={containerClick}>
-      <Card className="job-list-card">
+    <div className="container-for-joblist-card">
+      <Card className="job-list-card" onClick={containerClick}>
         <div className="content-for-job-list">
           <div className="joblist-no-bookmark">
             <img
@@ -81,15 +82,23 @@ function JoblistCard() {
           )}
           <ModalLogin
             show={loginModal}
-            onHide={() => setLoginModal(false)}
-            onRegis={() => {
+            onHide={(e) => {
+              e.stopPropagation();
+              setLoginModal(false);
+            }}
+            onRegis={(e) => {
               setLoginModal(false);
               setRegisModal(true);
+              e.stopPropagation();
+              console.log("regis click");
             }}
           />
           <ModalRegister
             show={regisModal}
-            onHide={() => setRegisModal(false)}
+            onHide={(e) => {
+              e.stopPropagation();
+              setRegisModal(false);
+            }}
             onSignIn={() => {
               setLoginModal(true);
               setRegisModal(false);
