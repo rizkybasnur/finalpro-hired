@@ -99,7 +99,8 @@ function JoblistCard() {
               e.stopPropagation();
               setRegisModal(false);
             }}
-            onSignIn={() => {
+            onSignIn={(e) => {
+              e.stopPropagation();
               setLoginModal(true);
               setRegisModal(false);
             }}
