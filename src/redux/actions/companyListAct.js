@@ -40,7 +40,7 @@ export const companyListAsync = () => {
 
 export const companySearchStart = () => {
   return {
-    type: "COMPANCOMPANYSEARCHYLIST/START",
+    type: "COMPANYSEARCH/START",
   };
 };
 

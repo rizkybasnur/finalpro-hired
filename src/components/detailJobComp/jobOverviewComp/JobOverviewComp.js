@@ -22,7 +22,7 @@ function JobOverviewComp({ getDataByID }) {
   const [regisModal, setRegisModal] = useState(false);
   const [applyModal, setApplyModal] = useState(false);
   const { token } = useSelector((state) => state.loginred);
-  const { getDatabyID } = useSelector((state) => state.findjobred);
+  // const { getDatabyID } = useSelector((state) => state.findjobred);
 
   const saveJobHandler = (e) => {
     e.preventDefault();

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import JobDetailComp from "./jobDetailComp/JobDetailComp";
 import JobOverviewComp from "./jobOverviewComp/JobOverviewComp";
 import BannerDetailJobs from "../global/bannerComp/bannerDetailJobs/BannerDetailJobs";
-import { getDataByIDAsync, jobListAsync } from "../../redux/actions/findJobAct";
+import { jobListAsync } from "../../redux/actions/findJobAct";
 import { useParams } from "react-router-dom";
 
 function DetailJobComp() {

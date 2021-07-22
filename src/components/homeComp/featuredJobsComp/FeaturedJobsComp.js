@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./FeaturedJobsComp.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -10,7 +10,8 @@ function FeaturedJobsComp() {
   const dispatch = useDispatch();
   const { companyData } = useSelector((state) => state.homepagered);
 
-  const CardMiniView = companyData.map((data1, index) => (
+  const slice = companyData.slice(0, 8);
+  const CardMiniView = slice.map((data1, index) => (
     <CardMini key={index} data={data1} />
   ));
   console.log("companyData", companyData);

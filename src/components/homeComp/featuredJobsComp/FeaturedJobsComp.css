@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0px;
 }
 .btn-fea {
   background-color: rgba(226, 239, 255, 1);
@@ -45,7 +46,7 @@
 }
 .featur-global {
   width: 972px;
-  height: 259px;
+  height: 315px;
   display: flex;
   justify-content: center;
   flex-direction: column;

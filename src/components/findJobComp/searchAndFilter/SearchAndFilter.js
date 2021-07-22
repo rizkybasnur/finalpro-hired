@@ -18,6 +18,7 @@ function SearchAndFilter() {
   const [experience, setExperience] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const { industry_categories } = useSelector((state) => state.filterjobred);
+  console.log("titleSearch", titleSearch);
 
   const handlerDdCheckBox = (e) => {
     console.log(e);
@@ -83,21 +84,20 @@ function SearchAndFilter() {
     };
 
     const inputParams = () => {
-      const title = titleSearch !== "" ? `${keys["title"]}` + titleSearch : "";
+      const title = titleSearch !== "" ? `&${keys["title"]}` + titleSearch : "";
       const location =
-        locationSearch !== "" ? `${keys["location"]}` + locationSearch : "";
+        locationSearch !== "" ? `&${keys["location"]}` + locationSearch : "";
       const categories =
         selectedItems.length !== 0
-          ? `${keys["categories"]}` + selectedItems
+          ? `&${keys["categories"]}` + selectedItems
           : "";
-
       const jobtype =
-        jobType.length !== 0 ? `${keys["jobtype"]}` + jobType : "";
-      const slry = salary.length !== 0 ? `${keys["slry"]}` + salary : "";
+        jobType.length !== 0 ? `&${keys["jobtype"]}` + jobType : "";
+      const slry = salary.length !== 0 ? `&${keys["slry"]}` + salary : "";
       const exprnc =
-        experience.length !== 0 ? `${keys["exprnc"]}` + experience : "";
-      const result = `${title}&${location}&${categories}&${jobtype}&${slry}&${exprnc}`;
-      return result.slice(0, -1);
+        experience.length !== 0 ? `&${keys["exprnc"]}` + experience : "";
+      const result = `${title}${location}${categories}${jobtype}${slry}${exprnc}`;
+      return result;
     };
 
     console.log("INPUT PARAMS", inputParams());
@@ -129,12 +129,12 @@ function SearchAndFilter() {
               className="icon-bag"
               src="https://i.ibb.co/hCCZXFc/bag-icon.png"
               alt=""
-              value={titleSearch}
-              onChange={(e) => setTitleSearch(e.target.value)}
             />
             <Form.Control
               type="text"
               placeholder="Title, keywords, or company"
+              value={titleSearch}
+              onChange={(e) => setTitleSearch(e.target.value)}
             />
           </div>
           {/* ----- DIV UNTUK GROUP INPUT KEDUA ----- */}
@@ -144,10 +144,13 @@ function SearchAndFilter() {
               className="icon-location"
               src="https://i.ibb.co/WV3zyZV/location-icon.png"
               alt=""
+            />
+            <Form.Control
+              type="text"
+              placeholder="City or passcode"
               value={locationSearch}
               onChange={(e) => setLocationSearch(e.target.value)}
             />
-            <Form.Control type="text" placeholder="City or passcode" />
           </div>
           {/* ----- DIV UNTUK GROUP DROPDOWN ----- */}
           <div className="group-for-card-text-and-input">

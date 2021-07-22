@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./TopCompanyComp.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -10,7 +10,8 @@ function TopCompanyComp() {
   const dispatch = useDispatch();
   const { companyData } = useSelector((state) => state.homepagered);
 
-  const cardTopView = companyData.map((data1, index) => (
+  const slice = companyData.slice(9, 18);
+  const cardTopView = slice.map((data1, index) => (
     <CardTop key={index} data={data1} />
   ));
   const responsive = {

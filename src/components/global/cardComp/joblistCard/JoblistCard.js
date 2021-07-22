@@ -18,7 +18,7 @@ function JoblistCard({ data }) {
   const [loginModal, setLoginModal] = useState(false);
   const [regisModal, setRegisModal] = useState(false);
   const { token } = useSelector((state) => state.loginred);
-  const { roles } = useSelector((state) => state.regisred);
+  // const { roles } = useSelector((state) => state.regisred);
 
   const containerClick = (id) => {
     history.push(`/jobdetailpage/${id}`);

@@ -61,7 +61,7 @@ export const jobSearchAsync = (queryparams) => {
     jobSearchSrvc(queryparams)
       .then((response) => {
         console.log(response);
-        dispatch(jobSearchSuccess(response.data.data));
+        dispatch(jobListSuccess(response.data.data));
       })
       .catch((error) => {
         console.log(error.message);
