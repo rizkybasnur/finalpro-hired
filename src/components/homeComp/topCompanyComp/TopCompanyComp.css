@@ -1,0 +1,40 @@
+.conten-judul {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+
+.conten-judul-container {
+  width: 1440px;
+}
+
+.judul-top {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #3e3e3e;
+  margin-bottom: 13px;
+}
+
+.title-top {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+  color: #3e3e3e;
+}
+.gelobat-judul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 975px;
+  height: 350px;
+  margin-left: 232px;
+}

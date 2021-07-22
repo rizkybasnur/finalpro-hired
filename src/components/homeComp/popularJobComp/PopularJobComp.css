@@ -1,0 +1,50 @@
+.btn-pop {
+  border-radius: 69px;
+  border: 1px solid #3d8eff;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(61, 142, 255, 1);
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+}
+.btn-popu {
+  display: flex;
+  padding-right: 52px;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+.populerjob {
+  height: 245px;
+
+  width: 968px;
+
+  justify-content: center;
+}
+
+.populer {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  padding-bottom: 13px;
+  text-align: center;
+}
+.titlepop {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.populer-global {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 95px;
+}
+.biru {
+  background-color: rgba(61, 142, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}

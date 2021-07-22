@@ -1,21 +1,42 @@
 const initialState = {
-  roles: null,
   firstname: null,
   lastname: null,
   email: null,
-  password: null,
+  roles: null,
+  loading: false,
+  error: false,
+  error_message: "",
+  status: "",
 };
 
 const regisRed = (state = initialState, action) => {
   switch (action.type) {
-    case "REGIS":
+    case "REGIS/START":
       return {
         ...state,
-        roles: action.payload.roles,
-        firstname: action.payload.name,
-        lastname: action.payload.name,
+        loading: true,
+      };
+    case "REGIS/SUCCESS":
+      return {
+        ...state,
+        firstname: action.payload.firstname,
+        lastname: action.payload.lastname,
         email: action.payload.email,
-        password: action.payload.password,
+        roles: action.payload.roles,
+        status: action.payload.status,
+        loading: false,
+      };
+    case "REGIS/ERROR":
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        error_message: action.payload.errorMessage,
+      };
+    case "CLEAR":
+      return {
+        ...state,
+        roles: "",
       };
     default:
       return { ...state };

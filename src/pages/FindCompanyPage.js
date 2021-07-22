@@ -4,7 +4,7 @@ import BannerFindCompany from "../components/global/bannerComp/bannerFindCompany
 import FooterLightComp from "../components/global/footerLightComp/FooterLightComp";
 import HeaderComp from "../components/global/headerComp/HeaderComp";
 
-function CompanySearchPage() {
+function FindCompanyPage() {
   return (
     <div>
       <HeaderComp />
@@ -15,4 +15,4 @@ function CompanySearchPage() {
   );
 }
 
-export default CompanySearchPage;
+export default FindCompanyPage;

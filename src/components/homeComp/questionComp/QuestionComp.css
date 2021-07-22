@@ -1,0 +1,150 @@
+.gambarbawah {
+  height: 455px;
+  margin-right: 100px;
+  top: 2407px;
+  border-radius: 10px;
+}
+
+.kuest {
+  border-radius: 5px;
+  width: 266px;
+
+  position: absolute;
+  padding: 16px;
+  left: 378px;
+  top: 34px;
+
+  background: #ffffff;
+  box-shadow: 5px 5px 23px -5px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+}
+.ga {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.kotak {
+  height: 229px;
+  width: 441px;
+
+  top: 2537px;
+  border-radius: 6px;
+  text-align: left;
+  width: 441px;
+  height: 229px;
+
+  margin-top: 100px;
+}
+.titleques {
+  height: 72px;
+  width: 441px;
+  left: 765px;
+  top: 2537px;
+  border-radius: nullpx;
+}
+
+.keterangan {
+  height: 70px;
+  width: 441px;
+  left: 765px;
+  top: 2625px;
+  border-radius: nullpx;
+}
+.btn-ques {
+  height: 55px;
+  width: 145px;
+  left: 765px;
+  top: 2711px;
+  border-radius: 6px;
+  padding: 14px, 139px, 14px, 139px;
+  background-color: rgba(25, 103, 211, 1);
+  color: #ffffff;
+  border: transparent;
+}
+.ques {
+  display: flex;
+  justify-content: center;
+  height: 113px;
+  width: 975px;
+  left: 232px;
+  top: 2918px;
+  border-radius: 0px;
+}
+.pengunjung b {
+  height: 36px;
+  left: 696px;
+  top: 2937px;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+
+  color: #3e3e3e;
+}
+.pengunjung p {
+  width: 211px;
+  height: 24px;
+  left: 947px;
+  top: 2989px;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #3e3e3e;
+}
+.titleques {
+  width: 441px;
+  height: 72px;
+  left: 765px;
+  top: 2537px;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+
+  color: #3e3e3e;
+}
+.btn-question {
+  width: 202px;
+  height: 24px;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  flex: none;
+  color: #3e3e3e;
+}
+.gaimg {
+  margin-left: 18px;
+  margin-right: 8px;
+}
+
+.question-global {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 123px;
+  margin-bottom: 91px;
+}
+.ques {
+  height: 113px;
+
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wraper-gambar {
+  display: flex;
+
+  padding: 0px 20px;
+  position: relative;
+}

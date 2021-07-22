@@ -1,0 +1,73 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container-SavedJobsEmptyComp {
+  background: #e5e5e5;
+  width: 1170px;
+  height: 906px;
+  padding: 46px 40px 275px 40px;
+}
+
+.container-SavedJobsEmptyComp h3 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+
+.child-SavedJobsEmptyComp {
+  height: 538px;
+  width: 1090px;
+  border-radius: 5px;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-SavedJobsEmptyComp img {
+  height: 206px;
+  width: 265px;
+  border-radius: 0px;
+  margin-bottom: 32px;
+}
+
+.child-SavedJobsEmptyComp h4 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin-bottom: 8px;
+}
+
+.child-SavedJobsEmptyComp h5 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e3e3e;
+  margin-bottom: 16px;
+}
+
+.child-SavedJobsEmptyComp button {
+  background: #e2efff;
+  border-radius: 6px;
+  height: 55px;
+  width: 262px;
+  border: hidden;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #1967d3;
+}

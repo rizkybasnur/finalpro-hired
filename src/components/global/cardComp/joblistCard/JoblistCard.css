@@ -1,5 +1,6 @@
 .container-for-joblist-card {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 33px;
@@ -8,11 +9,12 @@
 
 .job-list-card {
   height: 137px;
-  width: 100%;
+  width: 640px;
   padding: 24px 24px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 }
 
 .joblist-logo {
@@ -35,7 +37,8 @@
 
 .container-for-h {
   margin-left: 19px;
-  margin-right: 115px;
+  width: 444px;
+  height: 89px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -71,6 +74,7 @@
 .job-detail-joblist {
   display: flex;
   align-items: baseline;
+  width: 392px;
 }
 
 .company-logo {

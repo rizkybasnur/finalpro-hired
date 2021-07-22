@@ -1,0 +1,60 @@
+* {
+  font-family: Proxima Nova;
+  font-style: normal;
+}
+
+.featurcard {
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.jusulfeatur h6 {
+  color: rgba(62, 62, 62, 1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 13px;
+}
+.titlefeatur {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.btn-fea {
+  background-color: rgba(226, 239, 255, 1);
+  color: rgba(25, 103, 211, 1);
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+.react-multi-carousel-list {
+  height: 400px;
+}
+.container-featur-global {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(225, 225, 225, 1);
+  padding-bottom: 80px;
+  padding-top: 65px;
+}
+.featur-global {
+  width: 972px;
+  height: 259px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.jusulfeatur h6 {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}

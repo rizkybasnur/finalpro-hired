@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function UserDropdownComp() {
-  const { fullname } = useSelector((state) => state.loginred);
+  const { firstname } = useSelector((state) => state.loginred);
   const history = useHistory();
-
+  console.log("firstname", firstname);
   const handleUser = () => {
     history.push("/myprofilepage");
   };
@@ -33,7 +33,7 @@ function UserDropdownComp() {
           {/* <img src="Vector-dropdown.svg" alt="" /> */}
           <Dropdown>
             <a href=" " onClick={handleUser}>
-              {fullname}
+              {firstname}
             </a>
 
             <Dropdown.Toggle split variant="none" id="dropdown-split-user" />

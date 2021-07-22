@@ -5,17 +5,22 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import "./SearchAndFilter.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectAct } from "../../../redux/actions/selectAct";
+import { jobSearchAsync } from "../../../redux/actions/findJobAct";
 
 function SearchAndFilter() {
   const dispatch = useDispatch();
-  const [selectedItems, setSelectedItems] = useState([]);
-  const [jobType, setJobType] = useState([]);
-  const [experience, setExperience] = useState([]);
   const [salary, setSalary] = useState([]);
+  const [jobType, setJobType] = useState([]);
+  const [titleSearch, setTitleSearch] = useState("");
+  const [locationSearch, setLocationSearch] = useState("");
+  const [experience, setExperience] = useState([]);
+  const [selectedItems, setSelectedItems] = useState([]);
+  const { industry_categories } = useSelector((state) => state.filterjobred);
 
   const handlerDdCheckBox = (e) => {
+    console.log(e);
     if (e.target.checked) {
       setSelectedItems([...selectedItems, e.target.value]);
     } else {
@@ -55,8 +60,51 @@ function SearchAndFilter() {
   };
 
   useEffect(() => {
+    if (industry_categories.length !== 0) {
+      handlerDdCheckBox({
+        target: { value: industry_categories, checked: true },
+      });
+      setSelectedItems([industry_categories]);
+    }
+  }, [industry_categories]);
+
+  useEffect(() => {
     dispatch(selectAct(selectedItems));
   }, [dispatch, selectedItems]);
+
+  const searchHandler = (e) => {
+    const keys = {
+      title: "job_title=",
+      location: "location=",
+      categories: "industry_categories=",
+      jobtype: "job_types=",
+      slry: "salary_range=",
+      exprnc: "experience_levels=",
+    };
+
+    const inputParams = () => {
+      const title = titleSearch !== "" ? `${keys["title"]}` + titleSearch : "";
+      const location =
+        locationSearch !== "" ? `${keys["location"]}` + locationSearch : "";
+      const categories =
+        selectedItems.length !== 0
+          ? `${keys["categories"]}` + selectedItems
+          : "";
+
+      const jobtype =
+        jobType.length !== 0 ? `${keys["jobtype"]}` + jobType : "";
+      const slry = salary.length !== 0 ? `${keys["slry"]}` + salary : "";
+      const exprnc =
+        experience.length !== 0 ? `${keys["exprnc"]}` + experience : "";
+      const result = `${title}&${location}&${categories}&${jobtype}&${slry}&${exprnc}`;
+      return result.slice(0, -1);
+    };
+
+    console.log("INPUT PARAMS", inputParams());
+    e.preventDefault();
+    dispatch(jobSearchAsync(inputParams()));
+    console.log("coba aja dulu", dispatch(jobSearchAsync(inputParams())));
+  };
 
   return (
     <div>
@@ -81,6 +129,8 @@ function SearchAndFilter() {
               className="icon-bag"
               src="https://i.ibb.co/hCCZXFc/bag-icon.png"
               alt=""
+              value={titleSearch}
+              onChange={(e) => setTitleSearch(e.target.value)}
             />
             <Form.Control
               type="text"
@@ -94,6 +144,8 @@ function SearchAndFilter() {
               className="icon-location"
               src="https://i.ibb.co/WV3zyZV/location-icon.png"
               alt=""
+              value={locationSearch}
+              onChange={(e) => setLocationSearch(e.target.value)}
             />
             <Form.Control type="text" placeholder="City or passcode" />
           </div>
@@ -112,7 +164,6 @@ function SearchAndFilter() {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 {[
-                  "All categories",
                   "Accounting and Finance",
                   "Administration and Coordination",
                   "Architecture and Engineering",
@@ -122,7 +173,7 @@ function SearchAndFilter() {
                   "General Services",
                   "Health and Medical",
                   "Human Resources",
-                  "IT and Software",
+                  "IT & Software",
                   "Legal",
                   "Management and Consultancy",
                   "Manufacturing and Production",
@@ -146,11 +197,6 @@ function SearchAndFilter() {
                   </div>
                 ))}
               </Dropdown.Menu>
-              {/* <div className="container-for-selected-items">
-                {selectedItems.map((type) => (
-                  <h6 className="container-for-selected-h6">{type}</h6>
-                ))}
-              </div> */}
             </Dropdown>
           </div>
 
@@ -246,7 +292,12 @@ function SearchAndFilter() {
               checked={salary.includes("> Rp15.000.000")}
             />
           </Form>
-          <Button className="button-on-search-and-filter">Search</Button>
+          <Button
+            className="button-on-search-and-filter"
+            onClick={searchHandler}
+          >
+            Search
+          </Button>
         </Card.Body>
       </Card>
     </div>

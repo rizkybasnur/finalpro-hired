@@ -1,25 +1,27 @@
-import Modal from "react-bootstrap/Modal";
-import { Button } from "react-bootstrap";
-import { useState } from "react";
-import { regisSrvc } from "../../../../services/regisSrvc";
 import "../ModalComp.css";
+import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import { useDispatch, useSelector } from "react-redux";
+import { regisAsync } from "../../../../redux/actions/regisAct";
+import { loginAsync } from "../../../../redux/actions/loginAct";
 
 function ModalRegister(props) {
-  const [roles, setRoles] = useState("candidate");
+  const [eroles, setRoles] = useState("candidate");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [regVal, setRegVal] = useState(false);
-  // const [logVal, setLogVal] = useState(false);
   const [passwordShown, setPasswordShown] = useState(false);
   const [eyes, setEyes] = useState(false);
+  const dispatch = useDispatch();
+  const { loading, error } = useSelector((state) => state.regisred);
+  const { roles } = useSelector((state) => state.regisred);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
     setEyes((prevCheck) => !prevCheck);
   };
-  console.log("eyes", eyes);
 
   const handleCandidate = (e) => {
     e.preventDefault();
@@ -31,32 +33,16 @@ function ModalRegister(props) {
     setRoles("employer");
   };
 
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    regisSrvc(roles, firstName, lastName, email, password)
-      .then((response) => {
-        console.log(response);
-        // const { status } = response.data;
-        // dispatch(regisAct(roles, firstname, lastname, email, password));
-      })
-      .catch((error) => {
-        console.log(error);
-        // dispatch(regisAct(null, null, null, error.message));
-      });
+  const handleSignUp = () => {
+    dispatch(regisAsync(firstName, lastName, email, password, eroles));
   };
 
-  // useEffect(() => {
-  //   if (status === 200) {
-  //     setLoginmodal(true);
-  //     setRegmodal(false);
-  //   } else if (status === null) {
-  //     setRegVal(false);
-  //   } else {
-  //     setRegVal(true);
-  //   }
-  // }, [status]);
+  useEffect(() => {
+    if (roles === "OK") {
+      props.onSignUp();
+    }
+  }, [props, roles]);
 
-  console.log("can", roles);
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Body className="body-register">
@@ -71,9 +57,9 @@ function ModalRegister(props) {
         <div className="alt-register">
           <button
             className={
-              roles === "candidate" ? "button-active" : "button-non-active"
+              eroles === "candidate" ? "button-active" : "button-non-active"
             }
-            value={roles}
+            value={eroles}
             onClick={handleCandidate}
           >
             <img
@@ -85,9 +71,9 @@ function ModalRegister(props) {
           </button>
           <button
             className={
-              roles === "employer" ? "button-active" : "button-non-active"
+              eroles === "employer" ? "button-active" : "button-non-active"
             }
-            value={roles}
+            value={eroles}
             onClick={handleEmployer}
           >
             <img
@@ -141,9 +127,23 @@ function ModalRegister(props) {
           <input type="checkbox" />
           <h6> I agree with Hired terms & conditions</h6>
         </div>
-        <Button variant="primary" onClick={handleSignUp}>
-          Sign up
-        </Button>
+        {loading && (
+          <div className="sr-only">
+            <div class="loadingio-spinner-pulse-esho8tkkiyh">
+              <div class="ldio-gkgrmmqd2nh">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        )}
+        {error && <div className="eror-login">incorrect username/password</div>}
+        {!loading && (
+          <Button variant="primary" onClick={handleSignUp}>
+            Sign up
+          </Button>
+        )}
       </Modal.Body>
       <Modal.Footer>
         <div className="alt-login">

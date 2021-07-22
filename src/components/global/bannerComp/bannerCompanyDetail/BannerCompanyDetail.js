@@ -1,15 +1,19 @@
 import React from "react";
 import "./BannerCompanyDetail.css";
 
-function BannerCompanyDetail() {
+function BannerCompanyDetail({ getCompanyByID }) {
   return (
-    <div className="container-for-banner-company-detail-page">
-      <img
-        className="banner-jobs"
-        src="https://i.ibb.co/KscCJHw/company-banner.png"
-        alt=""
-      />
-    </div>
+    <>
+      {getCompanyByID && (
+        <div className="container-for-banner-company-detail-page">
+          <img
+            className="banner-jobs"
+            src={getCompanyByID.company_logo}
+            alt=""
+          />
+        </div>
+      )}
+    </>
   );
 }
 

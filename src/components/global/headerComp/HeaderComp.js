@@ -30,66 +30,70 @@ function HeaderComp() {
   };
 
   return (
-    <div className="header-list">
-      <div className="list-logo">
-        <ul>
-          <li>
-            <img
-              className="logo-hired-on-header"
-              src="https://i.ibb.co/rybWczQ/Logo.png"
-              alt="Logo"
-              width="113px"
-              onClick={clickHome}
-            />
-          </li>
-          <li>
-            <a href="home" onClick={clickHome}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="findJobs" onClick={clickFindJob}>
-              Find Jobs
-            </a>
-          </li>
-          <li>
-            <a href="companies" onClick={clickCompanies}>
-              Find Companies
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="list-button">
-        {token === "" ? (
+    <div className="container-headerComp">
+      <div className="header-list">
+        <div className="list-logo">
           <ul>
             <li>
-              <button className="login" onClick={() => setLoginModal(true)}>
-                Login/Register
-              </button>
-              <ModalLogin
-                show={loginModal}
-                onHide={() => setLoginModal(false)}
-                onRegis={() => {
-                  setLoginModal(false);
-                  setRegisModal(true);
-                }}
+              <img
+                className="logo-hired-on-header"
+                src="https://i.ibb.co/rybWczQ/Logo.png"
+                alt="Logo"
+                width="113px"
+                onClick={clickHome}
               />
-              <ModalRegister
-                show={regisModal}
-                onHide={() => setRegisModal(false)}
-                onSignIn={() => {
-                  setLoginModal(true);
-                  setRegisModal(false);
-                }}
-              />
-              <li>
-                <button className="post">Post Job</button>
-              </li>
+            </li>
+            <li>
+              <a href="home" onClick={clickHome}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="findJobs" onClick={clickFindJob}>
+                Find Jobs
+              </a>
+            </li>
+            <li>
+              <a href="companies" onClick={clickCompanies}>
+                Find Companies
+              </a>
             </li>
           </ul>
-        ) : (
-          <UserDropdownComp />
-        )}
+        </div>
+        <div className="list-button">
+          {token === "" ? (
+            <ul>
+              <li>
+                <button className="login" onClick={() => setLoginModal(true)}>
+                  Login/Register
+                </button>
+                <ModalLogin
+                  show={loginModal}
+                  onHide={() => setLoginModal(false)}
+                  onRegis={() => {
+                    setLoginModal(false);
+                    setRegisModal(true);
+                  }}
+                />
+                <ModalRegister
+                  show={regisModal}
+                  onHide={() => setRegisModal(false)}
+                  onSignIn={() => {
+                    setLoginModal(true);
+                    setRegisModal(false);
+                  }}
+                  onSignUp={() => {
+                    setLoginModal(true);
+                    setRegisModal(false);
+                  }}
+                />
+                <button className="post">Post Job</button>
+              </li>
+            </ul>
+          ) : (
+            <UserDropdownComp />
+          )}
+        </div>
       </div>
     </div>
   );

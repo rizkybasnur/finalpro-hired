@@ -1,0 +1,56 @@
+.user {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 54px 230px;
+
+  background: rgba(25, 103, 211, 1);
+}
+.btn-user {
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  width: 145px;
+  height: 55px;
+
+  margin-bottom: 55px;
+}
+.btn-user h3 {
+  color: rgba(25, 103, 211, 1);
+  font-size: 14px;
+  flex: none;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 17px 46px;
+}
+.usertitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+
+  height: 36px;
+
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.usertitle1 {
+  font-size: 16px;
+  text-align: left;
+}
+.usertitle2 {
+  color: rgba(255, 255, 255, 1);
+}
+.user-global {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

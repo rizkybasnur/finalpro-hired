@@ -1,57 +1,51 @@
-import React from "react";
 import "./CompanyCard.css";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { companyListAsync } from "../../../../redux/actions/companyListAct";
 
-function CompanyCard() {
+function CompanyCard({ data }) {
   const history = useHistory();
-  const containerClick = (e) => {
-    e.preventDefault();
-    history.push("/companydetailpage");
+  const dispatch = useDispatch();
+
+  const containerClick = (id) => {
+    history.push(`/companydetailpage/${id}`);
+    dispatch(companyListAsync(id));
   };
+
+  useEffect(() => {
+    dispatch(companyListAsync());
+  }, [dispatch]);
 
   return (
     <div className="parent-container-for-company-card">
-      <div className="container-for-company-card" onClick={containerClick}>
-        <div className="company-list-card">
-          <div className="content-company-card">
-            <img src="https://i.ibb.co/Nszfsys/spotify-icon.png" alt="" />
-            <h5>spotify</h5>
-            <div className="location-company-card">
-              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
-              <h6> berlin</h6>
+      {data.map((e, index) => {
+        return (
+          <div
+            key={`${index}-${e.company_name}`}
+            className="container-for-company-card"
+            onClick={() => {
+              containerClick(e._id);
+              dispatch(companyListAsync(e._id));
+            }}
+          >
+            <div className="company-list-card">
+              <div className="content-company-card">
+                <img src={e.company_logo} alt="" />
+                <h5>{e.company_name}</h5>
+                <div className="location-company-card">
+                  <img
+                    src="https://i.ibb.co/WV3zyZV/location-icon.png"
+                    alt=""
+                  />
+                  <h6>{e.location}</h6>
+                </div>
+                <h4>4 open position</h4>
+              </div>
             </div>
-            <h4>4 open position</h4>
           </div>
-        </div>
-      </div>
-
-      <div className="container-for-company-card" onClick={containerClick}>
-        <div className="company-list-card">
-          <div className="content-company-card">
-            <img src="https://i.ibb.co/Nszfsys/spotify-icon.png" alt="" />
-            <h5>spotify</h5>
-            <div className="location-company-card">
-              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
-              <h6> berlin</h6>
-            </div>
-            <h4>4 open position</h4>
-          </div>
-        </div>
-      </div>
-
-      <div className="container-for-company-card" onClick={containerClick}>
-        <div className="company-list-card">
-          <div className="content-company-card">
-            <img src="https://i.ibb.co/Nszfsys/spotify-icon.png" alt="" />
-            <h5>spotify</h5>
-            <div className="location-company-card">
-              <img src="https://i.ibb.co/WV3zyZV/location-icon.png" alt="" />
-              <h6> berlin</h6>
-            </div>
-            <h4>4 open position</h4>
-          </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 }

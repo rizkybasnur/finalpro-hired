@@ -4,11 +4,19 @@
   font-family: sans-serif;
 }
 
+.container-FooterLightComp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .footer-contain {
   border: 1px solid #c2c3c6;
   height: 384px;
   width: 100%;
   color: #3e3e3e;
+
+  padding: 60px 200px 0;
   font-size: 12px;
   display: flex;
   flex-direction: column;
@@ -17,7 +25,6 @@
 .footer-light {
   display: flex;
   justify-content: space-between;
-  padding: 60px 200px 0;
   margin-bottom: 40px;
 }
 
@@ -77,4 +84,29 @@
   height: 80px;
   padding: 30px 200px;
   border-top: 1px solid #c2c3c6;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-contain {
+    padding: 20px 20px 0;
+    height: auto;
+  }
+
+  .footer-list {
+    display: flex;
+    /* border: 1px solid; */
+    font-size: 12px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 16px;
+    width: 70%;
+  }
+
+  .footer-light {
+    margin-bottom: 0px;
+  }
+
+  .footer-lightboot {
+    padding: 20px 0;
+  }
 }

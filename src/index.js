@@ -1,21 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { createStore } from "redux";
-import allRed from "./redux/reducers/Reducers";
+import React from "react";
+import thunk from "redux-thunk";
+import ReactDOM from "react-dom";
+import firebase from "firebase/app";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-import firebase from "firebase/app";
+import allRed from "./redux/reducers/Reducers";
 import { firebaseConfig } from "./firebaseConfig";
+import { createStore, applyMiddleware, compose } from "redux";
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const store = createStore(
-  allRed,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // agar bisa dibaca redux devtools
+const store = createStore(allRed, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>

@@ -29,7 +29,7 @@
   font-size: 39px;
 }
 
-.title-search h2 spam {
+.title-search h2 span {
   color: #2770d4;
 }
 .title-search h6 {
@@ -57,10 +57,12 @@
   padding: 0 0 0 11.5px;
   width: 500px;
   border-style: hidden;
+  background: #ffffffcb;
 }
 
 .input-search input:focus {
   outline: none;
+  background: #ffffffcb;
 }
 
 .input-search button {
@@ -114,65 +116,47 @@
   border-radius: 0 0 11px 11px;
 }
 
-/* .search-top {
-  width: 100%;
-  height: 400px;
-  padding-left: 25%;
-  background: url("./Background-search.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-}
+@media screen and (max-width: 1024px) {
+  .search-container {
+    font-family: Proxima Nova;
+    height: 558px;
+    max-width: 768px;
+    background-image: url("https://i.ibb.co/S5w6yqt/background-search-Comp.png");
+    background-size: 100%;
+  }
+  .title-search {
+    padding: 108px 0px 0px 20px;
+  }
 
-.search-background {
-  background-color: #f6f7fc;
-}
-.list-top h2 spam {
-  color: blue;
-  font-family: "Roboto", sans-serif;
-}
-.list-top h2 {
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-}
-.list-top h6 {
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-}
-.list-top {
-  width: 40%;
-  padding-top: 60px;
-}
+  .input-search {
+    margin: 0px 0px 0px 20px;
+    background: #ffffffcb;
+  }
 
-.search-top p {
-  font-size: 11px;
-  margin-top: 15px;
-}
+  .bot-title-search {
+    margin: 0px 506px 0px 20px;
+  }
 
-.input-search input {
-  width: 650px;
-  height: 50px;
-  border-radius: 5px;
-  border-style: none;
-  background-color: rgba(0, 0, 255, 0.156);
-  margin-top: 20px;
-  padding-left: 50px;
-  color: #3e3e3e;
-}
+  .title-search h2 {
+    color: #ffffffcb;
+  }
 
-.input-search button {
-  position: absolute;
-  left: 920px;
-  width: 100px;
-  height: 40px;
-  border-style: none;
-  border-radius: 5px;
-  background-color: #ff9d578d;
-  margin-top: 25px;
-  color: white;
-}
+  .title-search h6 {
+    color: rgb(79, 108, 253);
+  }
 
-.input-search img {
-  position: absolute;
-  left: 400px;
-  margin-top: 36px;
-} */
+  .bot-title-search p {
+    color: rgb(79, 108, 253);
+  }
+
+  .input-search input {
+    padding: 0 0 0 11.5px;
+    width: 500px;
+    border-style: hidden;
+    background: transparent;
+  }
+
+  .input-search input:focus {
+    background: transparent;
+  }
+}

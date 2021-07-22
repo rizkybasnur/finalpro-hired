@@ -1,20 +1,19 @@
-import Modal from "react-bootstrap/Modal";
-import { Button } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import { loginSrvc } from "../../../../services/loginSrvc";
 import "../ModalComp.css";
-// import { useSelector } from "react-redux";
-// import { loginAct } from "../../../../redux/actions/loginAct";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { loginAsync } from "../../../../redux/actions/loginAct";
+import { clear } from "../../../../redux/actions/regisAct";
 
 function ModalLogin(props) {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
+  const [eyes, setEyes] = useState(false);
   const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
-  const [eyes, setEyes] = useState(false);
-  const [status, setStatus] = useState(false);
-  const [validate, setValidate] = useState(false);
-  // const [picture, setPicture] = useState("");
+  const { loading, error } = useSelector((state) => state.loginred);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -23,37 +22,8 @@ function ModalLogin(props) {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    const store = window.localStorage;
-    loginSrvc(email, password)
-      .then((response) => {
-        console.log("response", response);
-        store.setItem("fullname", response.data.data.fullname);
-        store.setItem("profile_pic", response.data.data.profile_pic);
-        store.setItem("token", response.data.token);
-        store.setItem("email", response.data.data.email);
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.log(error);
-        // dispatch(loginAct(null, null, null, error.message));
-      });
+    dispatch(loginAsync(email, password));
   };
-
-  // function for login
-  // succes: close login modal
-  // failed: give failed notice
-  // useEffect(() => {
-  //   if (status === 200) {
-  //     props.onHide;
-  //   } else
-  // useEffect(() => {
-  //   if (status === null) {
-  //     setValidate(false);
-  //   } else {
-  //     setValidate(true);
-  //   }
-  // }, [status]);
-  // console.log(status, "status");
 
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
@@ -90,9 +60,28 @@ function ModalLogin(props) {
             onClick={togglePasswordVisiblity}
           />
         </div>
-        <Button variant="primary" onClick={loginHandler}>
-          Sign in
-        </Button>
+        {loading && (
+          // <div className="sr-only">
+          //   <Spinner animation="border" role="status">
+          //     <span></span>
+          //   </Spinner>
+          // </div>
+          <div className="sr-only">
+            <div class="loadingio-spinner-pulse-esho8tkkiyh">
+              <div class="ldio-gkgrmmqd2nh">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        )}
+        {error && <div className="eror-login">incorrect username/password</div>}
+        {!loading && (
+          <Button variant="primary" onClick={loginHandler}>
+            Sign in
+          </Button>
+        )}
         <h6>Forgot password?</h6>
       </Modal.Body>
       <Modal.Footer>
@@ -104,7 +93,13 @@ function ModalLogin(props) {
         </div>
         <p>
           Don't have an account?<br></br>
-          <a href="#signup" onClick={props.onRegis}>
+          <a
+            href="#signup"
+            onClick={() => {
+              props.onRegis();
+              dispatch(clear());
+            }}
+          >
             <span>Sign up</span>
           </a>
         </p>

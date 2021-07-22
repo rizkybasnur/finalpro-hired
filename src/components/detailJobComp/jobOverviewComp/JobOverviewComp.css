@@ -11,7 +11,7 @@
 }
 
 .container-for-job-overview {
-  margin-left: 26.59px;
+  margin-left: 0px;
 }
 
 .title-overview h5 {
@@ -20,7 +20,8 @@
   line-height: 24px;
   color: #3e3e3e;
   margin-bottom: 24px;
-  margin-top: 24px;
+  margin-top: 8.36px;
+  margin-left: 8.2px;
 }
 
 .job-overview-data {
@@ -30,9 +31,10 @@
 }
 
 .job-overview-data img {
+  height: 18.33333396911621px;
   width: 16.5px;
-  height: 18.33px;
   margin-right: 18.75px;
+  margin-left: 10.95px;
 }
 
 .job-overview-string h5 {
@@ -47,6 +49,83 @@
   color: #3e3e3e;
 }
 
+.job-overview-data2 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data2 img {
+  height: 18.33333396911621px;
+  width: 11px;
+  margin-right: 20.58px;
+  margin-left: 13.7px;
+}
+
+.job-overview-data3 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data3 img {
+  height: 18.33333396911621px;
+  width: 12.833334922790527px;
+  margin-right: 18.75px;
+  margin-left: 12.79px;
+}
+
+.job-overview-data4 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data4 img {
+  height: 14.666665077209473px;
+  width: 14.666665077209473px;
+  margin-right: 19.67px;
+  margin-left: 11.87px;
+}
+
+.job-overview-data5 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data5 img {
+  height: 14.666665077209473px;
+  width: 20.16666603088379px;
+  margin-right: 16.92px;
+  margin-left: 9.12px;
+}
+
+.job-overview-data6 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data6 img {
+  height: 18.33333396911621px;
+  width: 18.33333396911621px;
+  margin-right: 17.83px;
+  margin-left: 10.04px;
+}
+
+.job-overview-data7 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+}
+
+.job-overview-data7 img {
+  height: 13.749999046325684px;
+  width: 20.16666603088379px;
+  margin-right: 16px;
+  margin-left: 10.04px;
+}
 .containers-button-apply-and-save {
   display: flex;
   flex-direction: column;

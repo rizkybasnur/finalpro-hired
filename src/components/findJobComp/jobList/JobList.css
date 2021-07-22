@@ -1,7 +1,6 @@
 .joblist-list-title-box {
   padding-left: 32px;
   padding-top: 5px;
-
   margin-right: 234px;
 }
 
@@ -11,9 +10,9 @@
 
 .joblist-list-title {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: baseline;
-  margin-bottom: 33px;
+  margin-bottom: 16px;
   width: 640px;
 }
 

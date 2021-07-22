@@ -26,9 +26,6 @@
 .title-for-search-and-filter {
   font-style: normal;
   color: #c2c3c6;
-  /* font-size: 16px;
-  font-weight: 600;
-  line-height: 24px; */
 }
 
 .reset-for-search-and-filter {
@@ -132,7 +129,6 @@
 .container-for-selected-items {
   min-height: auto;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -150,6 +146,8 @@
   justify-content: center;
   align-content: center;
   color: #1967d3;
+  margin-bottom: 16px;
+  margin-right: 5px;
 }
 
 /*  CSS UNTUK CONTAINER CHECKBOX 1,2 DAN 3 BERSERTA ISINYA */
@@ -185,4 +183,8 @@
 .button-on-search-and-filter {
   width: 268px;
   height: 55px;
+}
+
+.form-check-input {
+  margin-left: -18px !important;
 }

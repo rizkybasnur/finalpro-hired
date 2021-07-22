@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const loginSrvc = async (email, password) => {
-  const url = "https://tutorins.herokuapp.com/api/v1/tutor/login";
+  const url = "https://hired-api.herokuapp.com/api/login/candidate";
   const data = {
     email,
     password,

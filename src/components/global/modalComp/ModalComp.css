@@ -205,8 +205,8 @@ img.mata-password-register {
   height: 24px;
   cursor: pointer;
   position: absolute;
-  top: 64%;
-  left: 87%;
+  top: 361px;
+  right: 32px;
 }
 
 .register-username input {
@@ -214,4 +214,102 @@ img.mata-password-register {
   font-size: 16px;
   line-height: 24px;
   color: #80848d;
+}
+
+.sr-only {
+  display: flex;
+  justify-content: center;
+}
+
+.eror-login {
+  text-align: center;
+  color: red;
+  margin-bottom: 23px;
+}
+
+@keyframes ldio-gkgrmmqd2nh-1 {
+  0% {
+    top: 8px;
+    height: 84px;
+  }
+  50% {
+    top: 29px;
+    height: 42px;
+  }
+  100% {
+    top: 29px;
+    height: 42px;
+  }
+}
+@keyframes ldio-gkgrmmqd2nh-2 {
+  0% {
+    top: 13.25px;
+    height: 73.5px;
+  }
+  50% {
+    top: 29px;
+    height: 42px;
+  }
+  100% {
+    top: 29px;
+    height: 42px;
+  }
+}
+@keyframes ldio-gkgrmmqd2nh-3 {
+  0% {
+    top: 18.5px;
+    height: 63px;
+  }
+  50% {
+    top: 29px;
+    height: 42px;
+  }
+  100% {
+    top: 29px;
+    height: 42px;
+  }
+}
+.ldio-gkgrmmqd2nh div {
+  position: absolute;
+  width: 15px;
+}
+.ldio-gkgrmmqd2nh div:nth-child(1) {
+  left: 17.5px;
+  background: #1d3f72;
+  animation: ldio-gkgrmmqd2nh-1 0.4166666666666667s cubic-bezier(0, 0.5, 0.5, 1)
+    infinite;
+  animation-delay: -0.08333333333333334s;
+}
+.ldio-gkgrmmqd2nh div:nth-child(2) {
+  left: 42.5px;
+  background: #5699d2;
+  animation: ldio-gkgrmmqd2nh-2 0.4166666666666667s cubic-bezier(0, 0.5, 0.5, 1)
+    infinite;
+  animation-delay: -0.04166666666666667s;
+}
+.ldio-gkgrmmqd2nh div:nth-child(3) {
+  left: 67.5px;
+  background: #d8ebf9;
+  animation: ldio-gkgrmmqd2nh-3 0.4166666666666667s cubic-bezier(0, 0.5, 0.5, 1)
+    infinite;
+  animation-delay: undefineds;
+}
+
+.loadingio-spinner-pulse-esho8tkkiyh {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-gkgrmmqd2nh {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.28);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-gkgrmmqd2nh div {
+  box-sizing: content-box;
 }

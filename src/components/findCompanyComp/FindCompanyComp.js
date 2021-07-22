@@ -1,7 +1,7 @@
 import React from "react";
-import SearchCard from "./searchCard/SearchCard";
 import "./FindCompanyComp.css";
 import CompanyContainer from "./companyContainer/CompanyContainer";
+import SearchCard from "./searchCard/SearchCard";
 
 function FindCompanyComp() {
   return (

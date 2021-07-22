@@ -17,7 +17,7 @@ function SearchComp() {
       <div className="search-container">
         <div className="title-search">
           <h2>
-            There are <spam>93,178</spam> job postings here for you!
+            There are <span>93,178</span> job postings here for you!
           </h2>
           <h6>Find jobs, employement & career opportunities</h6>
         </div>

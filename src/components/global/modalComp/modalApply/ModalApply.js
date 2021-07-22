@@ -6,7 +6,7 @@ function ModalApply(props) {
   const history = useHistory();
   const applyHandler = (e) => {
     e.preventDefault();
-    history.push("/jobdetailpage/submitted");
+    history.push("/jobdetailpage/apply/submitted");
   };
 
   return (

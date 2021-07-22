@@ -5,9 +5,41 @@ import Form from "react-bootstrap/Form";
 import "./SearchCard.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Button } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { companySearchAsync } from "../../../redux/actions/companyListAct";
 
 function SearchCard() {
+  const dispatch = useDispatch();
+  const [nameSearch, setNameSearch] = useState("");
+  const [locationSearch, setLocationSearch] = useState("");
+  const [sizeCheck, setSizeCheck] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
+
+  const searchHandler = (e) => {
+    const keys = {
+      name: "company_name=",
+      location: "location=",
+      categories: "industry_categories=",
+      size: "company_size=",
+    };
+
+    const inputParams = () => {
+      const name = nameSearch !== "" ? `${keys["name"]}` + nameSearch : "";
+      const location =
+        locationSearch !== "" ? `${keys["location"]}` + locationSearch : "";
+      const categories =
+        selectedItems.length !== 0
+          ? `${keys["categories"]}` + selectedItems
+          : "";
+      const size = sizeCheck.length !== 0 ? `${keys["size"]}` + sizeCheck : "";
+      const result = `${name}&${location}&${categories}&${size}`;
+      return result.slice(0, -1);
+    };
+
+    console.log("INPUT PARAMS", inputParams());
+    e.preventDefault();
+    dispatch(companySearchAsync(inputParams()));
+  };
 
   const handlerDdCheckBox = (e) => {
     if (e.target.checked) {
@@ -15,6 +47,21 @@ function SearchCard() {
     } else {
       setSelectedItems(selectedItems.filter((item) => item !== e.target.value));
     }
+  };
+
+  const handlerCompanyCheckBox = (e) => {
+    if (e.target.checked) {
+      setSizeCheck([...sizeCheck, e.target.value]);
+    } else {
+      setSizeCheck(sizeCheck.filter((item) => item !== e.target.value));
+    }
+  };
+
+  const handlerReset = () => {
+    setSelectedItems([]);
+    setSizeCheck([]);
+    setNameSearch("");
+    setLocationSearch("");
   };
 
   return (
@@ -26,7 +73,10 @@ function SearchCard() {
             <Card.Subtitle className="title-for-search-and-filter">
               Search and filters
             </Card.Subtitle>
-            <Card.Subtitle className="reset-for-search-and-filter">
+            <Card.Subtitle
+              className="reset-for-search-and-filter"
+              onClick={handlerReset}
+            >
               Reset
             </Card.Subtitle>
           </div>
@@ -41,6 +91,8 @@ function SearchCard() {
             <Form.Control
               type="text"
               placeholder="Title, keywords, or company"
+              value={nameSearch}
+              onChange={(e) => setNameSearch(e.target.value)}
             />
           </div>
           {/* ----- DIV UNTUK GROUP INPUT KEDUA ----- */}
@@ -51,7 +103,12 @@ function SearchCard() {
               src="https://i.ibb.co/WV3zyZV/location-icon.png"
               alt=""
             />
-            <Form.Control type="text" placeholder="City or passcode" />
+            <Form.Control
+              type="text"
+              placeholder="City or passcode"
+              value={locationSearch}
+              onChange={(e) => setLocationSearch(e.target.value)}
+            />
           </div>
           {/* ----- DIV UNTUK GROUP DROPDOWN ----- */}
           <div className="dropdown-on-search-and-filter">
@@ -68,7 +125,6 @@ function SearchCard() {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 {[
-                  "All categories",
                   "Accounting and Finance",
                   "Administration and Coordination",
                   "Architecture and Engineering",
@@ -78,7 +134,7 @@ function SearchCard() {
                   "General Services",
                   "Health and Medical",
                   "Human Resources",
-                  "IT and Software",
+                  "IT & Software",
                   "Legal",
                   "Management and Consultancy",
                   "Manufacturing and Production",
@@ -92,7 +148,7 @@ function SearchCard() {
                 ].map((type) => (
                   <div key={`default-${type}`}>
                     <Form.Check
-                      className="dropdown-form-check"
+                      className="dropdown-form-check kedua"
                       type="checkbox"
                       value={type}
                       label={`${type}`}
@@ -124,35 +180,21 @@ function SearchCard() {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 {[
-                  "All categories",
-                  "Accounting and Finance",
-                  "Administration and Coordination",
-                  "Architecture and Engineering",
-                  "Arts and Sports",
-                  "Customer Service",
-                  "Education and Training",
-                  "General Services",
-                  "Health and Medical",
-                  "Human Resources",
-                  "IT and Software",
-                  "Legal",
-                  "Management and Consultancy",
-                  "Manufacturing and Production",
-                  "Media and Creatives",
-                  "Public Service and NGOs",
-                  "Safety and Security",
-                  "Sales and Marketing",
-                  "Sciences",
-                  "Supply Chain",
-                  "Writing and Content",
-                ].map((type) => (
+                  "Self Employed",
+                  "1-10",
+                  "11-50",
+                  "51-200",
+                  "201 - 500",
+                  "501 - 1000",
+                  "1001 - 5000",
+                ].map((type, index) => (
                   <div key={`default-${type}`}>
                     <Form.Check
                       className="dropdown-form-check"
                       type="checkbox"
                       value={type}
-                      label={`${type}`}
-                      onChange={handlerDdCheckBox}
+                      label={`${type} ${index !== 0 ? "Employees" : ""}`}
+                      onChange={handlerCompanyCheckBox}
                     />
                   </div>
                 ))}
@@ -160,11 +202,19 @@ function SearchCard() {
             </Dropdown>
           </div>
           <div className="container-for-selected-items">
-            {selectedItems.map((type) => (
-              <h6 className="container-for-selected-h6">{type}</h6>
+            {sizeCheck.map((type, index) => (
+              <h6 className="container-for-selected-h6">
+                {type}
+                {type.length !== 13 ? " Employees" : ""}
+              </h6>
             ))}
           </div>
-          <Button className="button-on-search-and-filter">Search</Button>
+          <Button
+            className="button-on-search-and-filter"
+            onClick={searchHandler}
+          >
+            Search
+          </Button>
         </Card.Body>
       </Card>
     </div>

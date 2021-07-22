@@ -1,24 +1,34 @@
 import "./JobList.css";
 import React from "react";
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import Collapse from "react-bootstrap/Collapse";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import Collapse from "react-bootstrap/Collapse";
 import JoblistCard from "../../global/cardComp/joblistCard/JoblistCard";
+import { jobListAsync } from "../../../redux/actions/findJobAct";
 
 function JobList() {
-  const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  // const [open, setOpen] = useState(false);
+  const [indexAkhir, setIndexAkhir] = useState(7);
   const { select } = useSelector((state) => state.selectred);
+  const { jobData, loading, error } = useSelector((state) => state.findjobred);
+
+  useEffect(() => {
+    dispatch(jobListAsync());
+  }, [dispatch]);
+
+  const list = jobData.slice(0, indexAkhir);
+  const show = jobData && list.length === jobData.length;
+  const click = (e) => {
+    e.preventDefault();
+    list.length !== jobData.length && setIndexAkhir(indexAkhir + 7);
+  };
 
   return (
     <div className="joblist-list-title-box">
       {/* DETAIL JUMLAH JOBS TERDISPLAY */}
       <div className="joblist-list-title">
-        <h6>Showing 1-6 of 12 jobs</h6>
-        <div className="container-for-selected-items">
-          {select.map((tes) => (
-            <h6 className="container-for-selected-h6">{tes || []}</h6>
-          ))}
-        </div>
+        {/* <h6>Showing 1-6 of 12 jobs</h6> */}
 
         <select className="filter-by-time-dropdown">
           <option>New Jobs</option>
@@ -26,34 +36,36 @@ function JobList() {
           <option>Last month</option>
         </select>
       </div>
+      <div className="container-for-selected-items">
+        {select &&
+          select.map((tes) => (
+            <h6 className="container-for-selected-h6">{tes || []}</h6>
+          ))}
+      </div>
 
       {/* DISPLAY JOBLIST */}
-      <JoblistCard />
-      <JoblistCard />
-      <JoblistCard />
-      <JoblistCard />
-      <JoblistCard />
-      <JoblistCard />
-      <Collapse in={open}>
-        <div id="example-collapse-text">
-          <JoblistCard />
-          <JoblistCard />
-          <JoblistCard />
-          <JoblistCard />
-          <JoblistCard />
-          <JoblistCard />
-        </div>
-      </Collapse>
+      <JoblistCard data={list} />
 
       {/* EXPANDING BUTTON */}
+      {loading && (
+        <div className="sr-only">
+          <div class="loadingio-spinner-pulse-esho8tkkiyh">
+            <div class="ldio-gkgrmmqd2nh">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      )}
+      {error && <div className="eror-login">company not found</div>}
+
       <div className="show-more-button-joblist">
-        <button
-          onClick={() => setOpen(!open)}
-          aria-controls="example-collapse-text"
-          aria-expanded={open}
-        >
-          Show more
-        </button>
+        {show ? (
+          "This is the end of the search"
+        ) : (
+          <button onClick={click}>Show More</button>
+        )}
       </div>
     </div>
   );
