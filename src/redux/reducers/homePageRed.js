@@ -1,4 +1,5 @@
 const initialState = {
+  activemodal: "",
   companyData: [],
   loading: false,
   error: false,
@@ -43,7 +44,12 @@ const homePageRed = (state = initialState, action) => {
         error: true,
         error_message: action.payload.error_message,
       };
-
+    case "ACTIVEMODAL":
+      return {
+        ...state,
+        activemodal: action.payload.activemodal,
+        loading: false,
+      };
     default:
       return { ...state };
   }

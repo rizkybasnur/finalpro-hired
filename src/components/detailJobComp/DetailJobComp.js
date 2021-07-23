@@ -14,9 +14,7 @@ function DetailJobComp() {
 
   useEffect(() => {
     dispatch(jobListAsync());
-    // dispatch(getDataByIDAsync(id));
-    // console.log("tes useEffect");
-  }, [dispatch, id]);
+  }, [dispatch]);
 
   const getDataByID = jobData && jobData.find((item) => item._id === id);
 

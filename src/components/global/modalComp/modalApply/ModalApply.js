@@ -1,8 +1,11 @@
 import Modal from "react-bootstrap/Modal";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { activemodalAct } from "../../../../redux/actions/homePageAct";
 import "./ModalApply.css";
 
 function ModalApply(props) {
+  const dispatch = useDispatch();
   const history = useHistory();
   const applyHandler = (e) => {
     e.preventDefault();
@@ -18,7 +21,9 @@ function ModalApply(props) {
             className="close-apply-icon"
             src="https://i.ibb.co/1rWd0pV/close-icon-black.png"
             alt=""
-            onClick={props.onHide}
+            onClick={() => {
+              dispatch(activemodalAct(""));
+            }}
           />
         </div>
         <div>

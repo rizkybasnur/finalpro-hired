@@ -59,14 +59,15 @@ function JobList() {
         </div>
       )}
       {error && <div className="eror-login">company not found</div>}
-
-      <div className="show-more-button-joblist">
-        {show ? (
-          "This is the end of the search"
-        ) : (
-          <button onClick={click}>Show More</button>
-        )}
-      </div>
+      {!loading && (
+        <div className="show-more-button-joblist">
+          {show ? (
+            "This is the end of the search"
+          ) : (
+            <button onClick={click}>Show More</button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

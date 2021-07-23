@@ -1,7 +1,6 @@
 import React from "react";
 import "./CardMini.css";
 function CardMini({ data }) {
-  console.log("data", data);
   const e = data;
   return (
     <div>

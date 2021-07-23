@@ -1,4 +1,5 @@
 import { regisSrvc } from "../../services/regisSrvc";
+import { activemodalAct } from "./homePageAct";
 
 export const regisStart = () => {
   return {
@@ -34,6 +35,7 @@ export const regisAsync = (firstName, lastName, email, password, roles) => {
             response.data.statuesText
           )
         );
+        dispatch(activemodalAct("login"));
       })
       .catch((error) => {
         console.log(error.message);

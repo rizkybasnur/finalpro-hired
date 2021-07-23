@@ -12,16 +12,18 @@ import {
 } from "../../../redux/actions/findJobAct";
 import { useParams } from "react-router-dom";
 import moment from "moment";
+import { activemodalAct } from "../../../redux/actions/homePageAct";
 
 function JobOverviewComp({ getDataByID }) {
   const { id } = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
   const [saveJob, setSaveJob] = useState(false);
-  const [loginModal, setLoginModal] = useState(false);
-  const [regisModal, setRegisModal] = useState(false);
-  const [applyModal, setApplyModal] = useState(false);
+  // const [loginModal, setLoginModal] = useState(false);
+  // const [regisModal, setRegisModal] = useState(false);
+  // const [applyModal, setApplyModal] = useState(false);
   const { token } = useSelector((state) => state.loginred);
+  const activemodal = useSelector((state) => state.homepagered.activemodal);
   // const { getDatabyID } = useSelector((state) => state.findjobred);
 
   const saveJobHandler = (e) => {
@@ -130,34 +132,19 @@ function JobOverviewComp({ getDataByID }) {
               <div className="containers-button-apply-and-save">
                 <button
                   className="button-apply"
-                  onClick={
+                  onClick={() => {
                     token
-                      ? () => setApplyModal(true)
-                      : () => setLoginModal(true)
-                  }
+                      ? dispatch(activemodalAct("apply"))
+                      : dispatch(activemodalAct("login"));
+                  }}
                 >
                   Apply
                 </button>
                 <ModalApply
-                  show={applyModal}
-                  onHide={() => setApplyModal(false)}
+                  show={activemodal === "apply"}
+                  // onHide={() => setApplyModal(false)}
                 />
-                <ModalLogin
-                  show={loginModal}
-                  onHide={() => setLoginModal(false)}
-                  onRegis={() => {
-                    setLoginModal(false);
-                    setRegisModal(true);
-                  }}
-                />
-                <ModalRegister
-                  show={regisModal}
-                  onHide={() => setRegisModal(false)}
-                  onSignIn={() => {
-                    setLoginModal(true);
-                    setRegisModal(false);
-                  }}
-                />
+
                 {token ? (
                   <button className="button-save-job" onClick={saveJobHandler}>
                     {saveJob ? "Saved to List" : "Save Job"}
@@ -165,7 +152,7 @@ function JobOverviewComp({ getDataByID }) {
                 ) : (
                   <button
                     className="button-save-job"
-                    onClick={() => setLoginModal(true)}
+                    onClick={() => dispatch(activemodalAct("login"))}
                   >
                     Save Job
                   </button>

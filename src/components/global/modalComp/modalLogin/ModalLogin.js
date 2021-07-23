@@ -1,11 +1,12 @@
 import "../ModalComp.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { loginAsync } from "../../../../redux/actions/loginAct";
 import { clear } from "../../../../redux/actions/regisAct";
+import { activemodalAct } from "../../../../redux/actions/homePageAct";
 
 function ModalLogin(props) {
   const dispatch = useDispatch();
@@ -13,17 +14,22 @@ function ModalLogin(props) {
   const [eyes, setEyes] = useState(false);
   const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
-  const { loading, error } = useSelector((state) => state.loginred);
+  const { loading, error, statustext } = useSelector((state) => state.loginred);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
     setEyes((prevCheck) => !prevCheck);
   };
 
-  const loginHandler = (e) => {
-    e.preventDefault();
+  const loginHandler = () => {
     dispatch(loginAsync(email, password));
   };
+
+  // useEffect(() => {
+  //   if (statustext === "OK") {
+  //     props.onHide();
+  //   }
+  // }, [props, statustext]);
 
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
@@ -31,7 +37,9 @@ function ModalLogin(props) {
         <img
           src="https://i.ibb.co/XVZB7Lb/close-icon.png"
           alt=""
-          onClick={props.onHide}
+          onClick={() => {
+            dispatch(activemodalAct(""));
+          }}
           className="close-button-modal-logreg"
         />
         <h2>Login to Hired</h2>
@@ -93,15 +101,14 @@ function ModalLogin(props) {
         </div>
         <p>
           Don't have an account?<br></br>
-          <a
-            href="#signup"
+          <button
+            className="sign-in-sign-up"
             onClick={() => {
-              props.onRegis();
-              dispatch(clear());
+              dispatch(activemodalAct("regis"));
             }}
           >
-            <span>Sign up</span>
-          </a>
+            Sign up
+          </button>
         </p>
       </Modal.Footer>
     </Modal>

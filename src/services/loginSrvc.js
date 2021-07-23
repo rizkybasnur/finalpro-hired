@@ -10,3 +10,9 @@ export const loginSrvc = async (email, password) => {
   console.log("response axios", response);
   return response;
 };
+
+// const onClick = () =>{
+//   dispatch(postApi).....
+//   jobId
+//   userId
+// }

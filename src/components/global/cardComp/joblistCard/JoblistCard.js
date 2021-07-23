@@ -5,24 +5,21 @@ import ModalLogin from "../../modalComp/modalLogin/ModalLogin";
 import ModalRegister from "../../modalComp/modalRegister/ModalRegister";
 import "./JoblistCard.css";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  jobListAsync,
-  // getDataByIDAsync,
-} from "../../../../redux/actions/findJobAct";
+import { jobListAsync } from "../../../../redux/actions/findJobAct";
+import { activemodalAct } from "../../../../redux/actions/homePageAct";
 
 function JoblistCard({ data }) {
   const history = useHistory();
   const dispatch = useDispatch();
   const [bookmark, setBookmark] = useState(false);
   const [IDBookmark, setIDBookmark] = useState([]);
-  const [loginModal, setLoginModal] = useState(false);
-  const [regisModal, setRegisModal] = useState(false);
+  // const [loginModal, setLoginModal] = useState(false);
+  // const [regisModal, setRegisModal] = useState(false);
   const { token } = useSelector((state) => state.loginred);
-  // const { roles } = useSelector((state) => state.regisred);
+  const activemodal = useSelector((state) => state.homepagered.activemodal);
 
   const containerClick = (id) => {
     history.push(`/jobdetailpage/${id}`);
-    // dispatch(jobListAsync(id));
   };
 
   useEffect(() => {
@@ -36,11 +33,10 @@ function JoblistCard({ data }) {
       setIDBookmark([...IDBookmark, id]);
     }
   };
-  console.log("IDBookmark", IDBookmark);
 
-  const handleLoginBookmark = () => {
-    setLoginModal(true);
-  };
+  // const handleLoginBookmark = () => {
+  //   setLoginModal(true);
+  // };
 
   return (
     <div className="container-for-joblist-card">
@@ -92,7 +88,9 @@ function JoblistCard({ data }) {
                   value={bookmark}
                   onClick={(eve) => {
                     eve.stopPropagation();
-                    token ? hanldeBookmarkClick(e._id) : handleLoginBookmark();
+                    token
+                      ? hanldeBookmarkClick(e._id)
+                      : dispatch(activemodalAct("login"));
                   }}
                   src={
                     IDBookmark.includes(e._id)
@@ -105,8 +103,8 @@ function JoblistCard({ data }) {
             </Card>
           );
         })}
-      <ModalLogin
-        show={loginModal}
+      {/* <ModalLogin
+        show={activemodal === "login"} 
         onHide={() => {
           setLoginModal(false);
         }}
@@ -116,7 +114,7 @@ function JoblistCard({ data }) {
         }}
       />
       <ModalRegister
-        show={regisModal}
+        show={activemodal === "regis"}
         onHide={() => {
           setRegisModal(false);
         }}
@@ -128,7 +126,7 @@ function JoblistCard({ data }) {
           setLoginModal(true);
           setRegisModal(false);
         }}
-      />
+      /> */}
     </div>
   );
 }

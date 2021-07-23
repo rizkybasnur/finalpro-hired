@@ -313,3 +313,11 @@ img.mata-password-register {
 .ldio-gkgrmmqd2nh div {
   box-sizing: content-box;
 }
+
+button.sign-in-sign-up {
+  color: blue;
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+  text-decoration: underline;
+}

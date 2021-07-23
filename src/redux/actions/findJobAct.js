@@ -1,4 +1,5 @@
 import { jobListSrvc, jobSearchSrvc } from "../../services/findJobSrvc";
+import { activemodalAct } from "./homePageAct";
 
 export const jobListStart = () => {
   return {
@@ -27,10 +28,12 @@ export const jobListAsync = () => {
       .then((response) => {
         console.log(response);
         dispatch(jobListSuccess(response.data.data));
+        dispatch(activemodalAct(""));
       })
       .catch((error) => {
         console.log(error.message);
         dispatch(jobListError(error.message));
+        dispatch(activemodalAct(""));
       });
   };
 };

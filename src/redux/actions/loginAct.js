@@ -1,4 +1,5 @@
 import { loginSrvc } from "../../services/loginSrvc";
+import { activemodalAct } from "./homePageAct";
 
 export const loginStart = () => {
   return {
@@ -6,10 +7,16 @@ export const loginStart = () => {
   };
 };
 
-export const loginSuccess = (email, firstName, profile_pic, token) => {
+export const loginSuccess = (
+  email,
+  firstName,
+  profile_pic,
+  token,
+  statustext
+) => {
   return {
     type: "LOGIN/SUCCESS",
-    payload: { email, firstName, profile_pic, token },
+    payload: { email, firstName, profile_pic, token, statustext },
   };
 };
 
@@ -36,9 +43,11 @@ export const loginAsync = (email, password) => {
             response.data.data.email,
             response.data.data.firstName,
             response.data.data.profile_pic,
-            response.data.data.token
+            response.data.data.token,
+            response.data.statustext
           )
         );
+        dispatch(activemodalAct(""));
       })
       .catch((error) => {
         console.log(error.message);

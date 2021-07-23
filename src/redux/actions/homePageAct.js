@@ -65,3 +65,10 @@ export const featureJobAsync = () => {
       });
   };
 };
+
+export const activemodalAct = (activemodal) => {
+  return {
+    type: "ACTIVEMODAL",
+    payload: { activemodal },
+  };
+};

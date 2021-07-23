@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { regisAsync } from "../../../../redux/actions/regisAct";
 import { loginAsync } from "../../../../redux/actions/loginAct";
+import { activemodalAct } from "../../../../redux/actions/homePageAct";
 
 function ModalRegister(props) {
   const [eroles, setRoles] = useState("candidate");
@@ -37,11 +38,11 @@ function ModalRegister(props) {
     dispatch(regisAsync(firstName, lastName, email, password, eroles));
   };
 
-  useEffect(() => {
-    if (roles === "OK") {
-      props.onSignUp();
-    }
-  }, [props, roles]);
+  // useEffect(() => {
+  //   if (roles === "OK") {
+  //     props.onSignUp();
+  //   }
+  // }, [props, roles]);
 
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
@@ -50,7 +51,9 @@ function ModalRegister(props) {
           className="close-button-x"
           src="https://i.ibb.co/XVZB7Lb/close-icon.png"
           alt=""
-          onClick={props.onHide}
+          onClick={() => {
+            dispatch(activemodalAct(""));
+          }}
           className="close-button-modal-logreg"
         />
         <h2>Create Hired Account</h2>
@@ -154,9 +157,14 @@ function ModalRegister(props) {
         </div>
         <p>
           Already have an account?<br></br>
-          <a href="#signup" onClick={props.onSignIn}>
-            <span>Sign in</span>
-          </a>
+          <button
+            className="sign-in-sign-up"
+            onClick={() => {
+              dispatch(activemodalAct("login"));
+            }}
+          >
+            Sign in
+          </button>
         </p>
       </Modal.Footer>
     </Modal>

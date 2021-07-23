@@ -1,33 +1,34 @@
 import React from "react";
 import "./HeaderComp.css";
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useState } from "react";
+import { useHistory, Link } from "react-router-dom";
 import ModalLogin from "../modalComp/modalLogin/ModalLogin";
 import ModalRegister from "../modalComp/modalRegister/ModalRegister";
-import { useSelector } from "react-redux";
-// import { Dropdown } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import UserDropdownComp from "../userDropdownComp/UserDropdownComp";
+import { activemodalAct } from "../../../redux/actions/homePageAct";
 
 function HeaderComp() {
+  const dispatch = useDispatch();
   const { token } = useSelector((state) => state.loginred);
-  const [loginModal, setLoginModal] = useState(false);
-  const [regisModal, setRegisModal] = useState(false);
+  // const [loginModal, setLoginModal] = useState(false);
+  // const [regisModal, setRegisModal] = useState(false);
   const history = useHistory();
-
+  const activemodal = useSelector((state) => state.homepagered.activemodal);
+  console.log("activemodal", activemodal);
   const clickHome = (e) => {
     e.preventDefault();
     history.push("/");
   };
 
-  const clickFindJob = (e) => {
-    e.preventDefault();
-    history.push("/findjobspage");
-  };
+  // const clickFindJob = () => {
+  //   history.push("/findjobspage");
+  // };
 
-  const clickCompanies = (e) => {
-    e.preventDefault();
-    history.push("/companysearchpage");
-  };
+  // const clickCompanies = (e) => {
+  //   e.preventDefault();
+  //   history.push("/companysearchpage");
+  // };
 
   return (
     <div className="container-headerComp">
@@ -44,19 +45,13 @@ function HeaderComp() {
               />
             </li>
             <li>
-              <a href="home" onClick={clickHome}>
-                Home
-              </a>
+              <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <a href="findJobs" onClick={clickFindJob}>
-                Find Jobs
-              </a>
+              <Link to={"/findjobspage"}>Find Jobs</Link>
             </li>
             <li>
-              <a href="companies" onClick={clickCompanies}>
-                Find Companies
-              </a>
+              <Link to={"/companysearchpage"}>Find Companies</Link>
             </li>
           </ul>
         </div>
@@ -64,29 +59,15 @@ function HeaderComp() {
           {token === "" ? (
             <ul>
               <li>
-                <button className="login" onClick={() => setLoginModal(true)}>
+                <button
+                  className="login"
+                  onClick={() => {
+                    dispatch(activemodalAct("login"));
+                  }}
+                >
                   Login/Register
                 </button>
-                <ModalLogin
-                  show={loginModal}
-                  onHide={() => setLoginModal(false)}
-                  onRegis={() => {
-                    setLoginModal(false);
-                    setRegisModal(true);
-                  }}
-                />
-                <ModalRegister
-                  show={regisModal}
-                  onHide={() => setRegisModal(false)}
-                  onSignIn={() => {
-                    setLoginModal(true);
-                    setRegisModal(false);
-                  }}
-                  onSignUp={() => {
-                    setLoginModal(true);
-                    setRegisModal(false);
-                  }}
-                />
+
                 <button className="post">Post Job</button>
               </li>
             </ul>
@@ -94,6 +75,26 @@ function HeaderComp() {
             <UserDropdownComp />
           )}
         </div>
+        <ModalLogin
+          show={activemodal === "login"}
+          // onHide={() => setLoginModal(false)}
+          onRegis={() => {
+            // setLoginModal(false);
+            // setRegisModal(true);
+          }}
+        />
+        <ModalRegister
+          show={activemodal === "regis"}
+          // onHide={() => setRegisModal(false)}
+          onSignIn={() => {
+            // setLoginModal(true);
+            // setRegisModal(false);
+          }}
+          onSignUp={() => {
+            // setLoginModal(true);
+            // setRegisModal(false);
+          }}
+        />
       </div>
     </div>
   );

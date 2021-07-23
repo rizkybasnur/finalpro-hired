@@ -9,7 +9,8 @@ const initialState = {
   firstname: firstname,
   profile_pic: profile_pic,
   token: token,
-  loading: false,
+  statustext: "",
+  loading: null,
   error: false,
   error_message: "",
 };
@@ -28,6 +29,7 @@ const loginRed = (state = initialState, action) => {
         firstname: action.payload.firstName,
         profile_pic: action.payload.profile_pic,
         token: action.payload.token,
+        statustext: action.payload.statustext,
         loading: false,
       };
     case "LOGIN/ERROR":
